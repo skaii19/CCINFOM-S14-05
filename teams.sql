@@ -16,8 +16,9 @@ CREATE TABLE team (
 TRUNCATE team;
 
 INSERT INTO team(team_id, team_name, region, total_winnings, active_status)
--- NA
+-- Americas
 	-- active teams
+	-- NA (North America)
 VALUES  ('100T', '100 Thieves', 'NA', 478500, 1),
 	   	('BERZ', 'Berzerkers', 'NA', 3695, 1),
 	    ('BLU', 'Blue Otter', 'NA', 10235, 1),
@@ -39,18 +40,40 @@ VALUES  ('100T', '100 Thieves', 'NA', 478500, 1),
 		('SAD', 'SaD Esports', 'NA', 17120, 1),
 		('SJSU', 'San Jose State University Esports', 'NA', 20275, 1),
 		('SEN', 'Sentinels', 'NA', 608000, 1),
-        ('TH', 'Team Heretics', 'NA', 1402894, 1),
+		('SCS', 'St. Clair College', 'NA', 30620, 1),
+		('TAMU', 'Texas A&M University', 'NA', 29388, 1),
         ('TSM', 'TSM', 'NA', 254019, 1),
+		('UH', 'University of Houston', 'NA', 19025, 1),
+		('UM', 'University of Missouri', 'NA', 14750, 1),
+		('UST', 'University of St. Thomas', 'NA', 17625, 1),
+		('VT', 'Virginia Tech', 'NA', 3300, 1),
+		('WU', 'Winthrop University', 'NA', 57838, 1),
+		('YFP', 'YFP', 'NA', 24375, 1),
+
+	-- BR (Brazil)
+		('2G', '2GAME Academy', 'BR', 10737, 1),
+		('CE', 'Corinthians Esports', 'BR', 13299, 1),
+		('EL', 'Elevate', 'BR', 10038, 1),
+		('FUR', 'FURIA', 'BR', 147889, 1),
+		('FURA', 'FURIA Academy', 'BR', 6101, 1),
+		('LOS', 'LOS', 'BR', 34322, 1),
+		('LOUD', 'LOUD', 'BR', 950156, 1),
+		('MIBR', 'MIBR', 'BR', 119458, 1),
+		('MIBA', 'MIBR Academy', 'BR', 3553, 1),
+		('RC', 'RED Canids', 'BR', 55593, 1),
+	
     -- inactive
+	-- NA
 		('GG', 'Ghost Gaming', 'NA', 49100, 0),
 		('SR', 'Shopify Rebellion', 'NA', 38000, 0),
 -- EMEA
-       ('FNC', 'FNATIC', 'EMEA', 2158026, 1), 
+        ('FNC', 'FNATIC', 'EMEA', 2158026, 1), 
+		('TH', 'Team Heretics', 'NA', 1402894, 1),
 -- APAC
-	   ('PRX', 'Paper Rex', 'APAC', 1899351, 1),
+	    ('PRX', 'Paper Rex', 'APAC', 1899351, 1),
 -- CN
-       ('EDG', 'Edward Gaming', 'CN', 1367287, 1),
-       ('AG', 'All Gamers', 'CN', 3334, 1),
-       ('ALG', 'Ambitious Legend Gaming', 'CN', 4159, 1);
+        ('EDG', 'Edward Gaming', 'CN', 1367287, 1),
+        ('AG', 'All Gamers', 'CN', 3334, 1),
+        ('ALG', 'Ambitious Legend Gaming', 'CN', 4159, 1);
 
 SELECT * FROM team;
