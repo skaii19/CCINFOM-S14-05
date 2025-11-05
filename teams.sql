@@ -21,7 +21,7 @@ INSERT INTO team(team_id, team_name, region, total_winnings, active_status)
 	-- NA (North America)
 VALUES  ('100T', '100 Thieves', 'NA', 478500, 1),
 		('C9', 'Cloud9', 'NA', 259143, 1),
-		('ENVY', 'ENVY', 'NA', 324750, 1),
+		('NV', 'ENVY', 'NA', 324750, 1),
 		('EG', 'Evil Genuises', 'NA', 1283000, 1),
 		('G2', 'G2 Esports', 'NA', 747250, 1),
 	    ('NRG', 'NRG', 'NA', 1415375, 1),
@@ -58,7 +58,7 @@ VALUES  ('100T', '100 Thieves', 'NA', 478500, 1),
 	
 -- KR (Korea)
 		('DRX', 'DRX', 'KR', 1100485, 1),
-		('GENG', 'Gen.G Esports', 'KR', 925328, 1),
+		('GEN', 'Gen.G Esports', 'KR', 925328, 1),
 		('NT', 'NUTURN Gaming', 'KR', 133327, 1),
 		('T1', 'T1', 'KR', 537044, 1),
 
@@ -70,7 +70,7 @@ VALUES  ('100T', '100 Thieves', 'NA', 478500, 1),
 		('DRG', 'Dragon Ranger Gaming', 'CN', 37875, 1),
         ('EDG', 'EDward Gaming', 'CN', 1367287, 1),
 		('FPX', 'FunPlus Pheonix', 'CN', 574490, 1),
-		('TRC', 'Trace Esports', 'CN', 89797, 1),
+		('TE', 'Trace Esports', 'CN', 89797, 1),
 		('WOL', 'Wolves Esports', 'CN', 129915, 1),
 		('XLG', 'Xi Lai Gaming', 'CN', 119325, 1),
 	
