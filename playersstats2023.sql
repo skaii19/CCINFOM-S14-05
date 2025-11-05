@@ -12,7 +12,7 @@ VALUES	-- Masters Tokyo 2023
  		('C0M', 'Corbin Lee', 'LEV', 'N'), -- 208
         ('jawgemo', 'Alexander Mor', 'G2', 'Y'), -- 209
         ('Demon1', 'Max Mazanov', NULL, 'N'), -- 210
-        ('Boostio', 'Kelden Pupello', 'NULL', 'N'), -- 211            
+        ('Boostio', 'Kelden Pupello', NULL, 'N'), -- 211            
  
  		-- DRX
         ('Foxy9', 'Jung Jae-sung', 'GEN', 'N'), -- 212      
