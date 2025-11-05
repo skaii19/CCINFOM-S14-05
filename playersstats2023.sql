@@ -5,7 +5,7 @@ VALUES	-- Masters Tokyo 2023
 		('AtaKaptan', 'Ata Tan', 'FUT', 'N'), -- 203
         ('MrFaliN', 'Furkan Yeğen', 'FUT', 'Y'), -- 204
         ('MOJJ', 'Buğra Kiraz', NULL, 'N'), -- 205
-        ('qRaxs', 'Doğukan Bala218', 'FUT', 'Y'), -- 206
+        ('qRaxs', 'Doğukan Balaban', 'FUT', 'Y'), -- 206
         ('qw1', 'Konuralp Şahin', 'S2G', 'Y'), -- 207
         
 		-- Evil Geniuses (EG)
