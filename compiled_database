@@ -115,12 +115,12 @@ CREATE TABLE IF NOT EXISTS team_placement (
 
 -- attendee
 CREATE TABLE IF NOT EXISTS attendee (
-	ticket_id INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
+	customer_id INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
 	customer_name VARCHAR(50),
 	date_of_ticket DATE,
     tournament_id VARCHAR(7),
     CONSTRAINT FOREIGN KEY (tournament_id) REFERENCES tournament(tournament_id),
-    seat_id VARCHAR(4),
+    ticket_id VARCHAR(4),
     ticket_price DECIMAL (8,2),
     mode_of_payment VARCHAR(16),
     verified BIT DEFAULT 0
