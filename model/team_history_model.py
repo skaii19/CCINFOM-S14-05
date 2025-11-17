@@ -146,23 +146,3 @@ class TeamHistoryModel:
             print(f"Error fetching full history for team {team_id}:", e)
             return []
     
-    # Get active players in a team
-    def get_current_players_in_team(self, team_id):
-        try:
-            cur = get_cursor()
-            cur.execute("""
-                SELECT
-                    th.player_id,
-                    p.player_name,
-                    th.start_date,
-                    th.end_date
-                FROM team_history th
-                LEFT JOIN player p ON th.player_id = p.player_id
-                WHERE th.team_id = %s
-                AND (th.end_date IS NULL OR th.end_date >= CURDATE())
-                ORDER BY th.start_date
-            """, (team_id,))
-            return cur.fetchall()
-        except Exception as e:
-            print(f"Error fetching current players for team {team_id}:", e)
-            return []
