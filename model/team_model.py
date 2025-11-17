@@ -148,4 +148,57 @@ class TeamModel:
             print("Error loading inactive teams:", e)
             return []
         
-    
+    # Get team placements
+    def get_team_placements(self, team_id):
+        try:
+            cur = get_cursor()
+            cur.execute("""
+                        SELECT *
+                        FROM team_placement
+                        WHERE team_id = %s
+                        ORDER BY tournament_id
+                        """, (team_id,))
+            return cur.fetchall()
+        except Exception as e:
+            print(f"Error fetching placements for team {team_id}:", e)
+            return []
+
+    # Get match history for a team
+    def get_team_match_history(self, team_id):
+        try:
+            cur = get_cursor()
+            cur.execute("""
+                        SELECT t.team_id,
+                            m.tournament_id,
+                            m.match_id,
+                            m.bracket,
+                            CONCAT(m.team1_id, ' vs ', m.team2_id) AS match_up,
+                            m.map_winner_team_id
+                        FROM matches m
+                        JOIN team t ON t.team_id = m.team1_id OR t.team_id = m.team2_id
+                        WHERE t.team_id = %s
+                        GROUP BY m.match_id
+                        ORDER BY m.tournament_id
+                        """, (team_id,))
+            return cur.fetchall()
+        except Exception as e:
+            print(f"Error fetching match history for team {team_id}:", e)
+            return []
+
+    # Get current roster for a team
+    def get_team_roster(self, team_id):
+        try:
+            cur = get_cursor()
+            cur.execute("""
+                        SELECT t.team_id,
+                            p.player_id,
+                            p.player_ign
+                        FROM team t
+                        JOIN player p ON p.team_id = t.team_id
+                        WHERE t.team_id = %s
+                        ORDER BY p.player_id
+                        """, (team_id,))
+            return cur.fetchall()
+        except Exception as e:
+            print(f"Error fetching roster for team {team_id}:", e)
+            return []
