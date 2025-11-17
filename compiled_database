@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS player (
 -- team history
 CREATE TABLE IF NOT EXISTS team_history (
 	player_id	INT NOT NULL,
-    start_date	DATE,
+    start_date	DATE NOT NULL,
     team_id		VARCHAR(4) NOT NULL,
     end_date	DATE,
     
@@ -308,7 +308,7 @@ INSERT INTO player (player_ign, player_name, team_id, active_status)
 VALUES	-- Masters Reykjavik 2021
 		-- Sentinels (SEN)
 		('ShahZaM', 'Shahzeeb Khan', NULL, 'N'), -- 1
-        ('SicK', 'Hunter Mims', 'SEN', 'N'), -- 2
+        ('SicK', 'Hunter Mims', NULL, 'N'), -- 2
         ('TenZ', 'Tyson Ngo', NULL, 'N'), -- 3
         ('zombs', 'Jared Gitlin', NULL, 'N'), -- 4
         ('dapr', 'Michael Gulino', NULL, 'N'), -- 5
@@ -321,21 +321,21 @@ VALUES	-- Masters Reykjavik 2021
         ('vanity', 'Anthony Malaspina', NULL, 'N'), -- 10
         
         -- Team Liquid (TL)
-        ('ScreaM', 'Adil Benrlitom', NULL, 'Y'), -- 11
+        ('ScreaM', 'Adil Benrlitom', NULL, 'N'), -- 11
         ('Kryptix', 'James Affleck', NULL, 'N'), -- 12
         ('L1NK', 'Travis Mendoza', NULL, 'N'), -- 13
         ('soulcas', 'Dom Sulcas', NULL, 'N'), -- 14
-        ('Jamppi', 'Elias Olkkonen', NULL, 'Y'), -- 15
+        ('Jamppi', 'Elias Olkkonen', NULL, 'N'), -- 15
         
         -- FNATIC (FNC)
         ('Boaster', 'Jake Howlett', 'FNC', 'Y'), -- 16
-        ('doma', 'Domagoj Fancev', NULL, 'Y'), -- 17
+        ('doma', 'Domagoj Fancev', NULL, 'N'), -- 17
         ('Mistic', 'James Orfila', NULL, 'N'), -- 18
         ('MAGNUM', 'Martin Penkov', NULL, 'N'), -- 19
         ('Derke', 'Nikita Sirmitev', 'VIT', 'Y'), -- 20
         
         -- Team Vikings (VKS1)
-        ('frz', 'Leandro Fukuda Gomes', NULL, 'Y'), -- 21
+        ('frz', 'Leandro Fukuda Gomes', NULL, 'N'), -- 21
         ('Sacy', 'Gustavo Rossi', NULL, 'N'), -- 22
         ('saadhak', 'Matias Delipetro', 'KC', 'Y'), -- 23
         ('gtn', 'Gustavo Moura', NULL, 'N'), -- 24
@@ -351,26 +351,26 @@ VALUES	-- Masters Reykjavik 2021
         -- Sharks Esports (SHK)
         ('fra', 'Matheus Fragozo', NULL, 'N'), -- 31
         ('light', 'Winicius César', NULL, 'N'), -- 32
-        ('prozin', 'Wallacy Sales', NULL, 'Y'), -- 33
+        ('prozin', 'Wallacy Sales', NULL, 'N'), -- 33
         ('deNaro', 'Matheus Hipólito', NULL, 'N'), -- 34
-        ('gaabxx', 'Gabriel Carli', NULL, 'Y'), -- 35
+        ('gaabxx', 'Gabriel Carli', NULL, 'N'), -- 35
         
         -- KRU Esports (KRU)
-        ('NagZ', 'Juan Pablo Lopez Miranda', NULL, 'Y'), -- 36
+        ('NagZ', 'Juan Pablo Lopez Miranda', NULL, 'N'), -- 36
         ('bnj', 'Benjamin Rabinovich', NULL, 'N'), -- 37
-        ('delz1k', 'Joaquin Espinoza', NULL, 'Y'), -- 38
-        ('Klaus', 'Nicolas Ferrari', NULL, 'Y'), -- 39
+        ('delz1k', 'Joaquin Espinoza', NULL, 'N'), -- 38
+        ('Klaus', 'Nicolas Ferrari', NULL, 'N'), -- 39
         ('Mazino', 'Roberto Rivas', NULL, 'N'), -- 40
         
         -- Crazy Raccoon (CR)
         ('Munchkin', 'Byeon Sang-beom', NULL, 'N'), -- 41
         ('zepher', 'Jyousuke Matsuda', NULL, 'N'), -- 42
         ('rion', 'Hiroto Tateno', NULL, 'N'), -- 43
-        ('Medusa', 'An Min-cheol', NULL, 'Y'), -- 44
-        ('neth', 'Yusuke Matsuda', NULL, 'Y'), -- 45
+        ('Medusa', 'An Min-cheol', NULL, 'N'), -- 44
+        ('neth', 'Yusuke Matsuda', NULL, 'N'), -- 45
         
         -- X10 Esports (X10)
-        ('foxz', 'Itthirit Ngamsaard', NULL, 'Y'), -- 46
+        ('foxz', 'Itthirit Ngamsaard', NULL, 'N'), -- 46
         ('Patiphan', 'Patiphan Chaiwong', NULL, 'N'), -- 47
         ('Sushiboys', 'Panyawat Subsiriroj', NULL, 'Y'), -- 48
         ('Crws', 'Thanamethk Mahatthananuyut', 'TLN', 'Y'), -- 49
@@ -518,11 +518,11 @@ VALUES	-- Masters Berlin 2021 added
         ('Victor', 'Victor Wong', NULL, 'N'), -- 57
         ('Marved', 'Jimmy Nguyen', NULL, 'N'), -- 58
         ('FiNESSE', 'Pujan Mehta', NULL, 'N'), -- 59
-        ('yay', 'Jaccob Whiteaker', NULL, 'Y'), -- 60
+        ('yay', 'Jaccob Whiteaker', NULL, 'N'), -- 60
         
         -- Vision Strikers (VS)
         ('stax', 'Kim Gu-taek', 'T1', 'Y'), -- 61
-        ('Rb', 'Goo Sang-min', NULL, 'Y'), -- 62
+        ('Rb', 'Goo Sang-min', NULL, 'N'), -- 62
         ('k1Ng', 'Lee Seung-won', NULL, 'N'), -- 63
         ('BuZz', 'Yu Byeong-cheol', 'T1', 'Y'), -- 64
         ('MaKo', 'Kim Myeong-gwan', 'DRX', 'Y'), -- 65
@@ -532,41 +532,41 @@ VALUES	-- Masters Berlin 2021 added
         ('koldamenta', 'Jose Luis Aranguren', NULL, 'N'), -- 67
         ('AvovA', 'Auni Chahade', NULL, 'N'), -- 68
         ('nukkye', 'Žygimantas Chmieliauskas', NULL, 'N'), -- 69
-        ('keloqz', 'Cista Wassim', NULL, 'Y'), -- 70
+        ('keloqz', 'Cista Wassim', NULL, 'N'), -- 70
         
         -- KRU Esports (KRU)
         ('keznit', 'Angelo Mori', NULL, 'N'), -- 71
         
         -- Acend (ACE)
-        ('zeek', 'Aleksander Zygmunt', NULL, 'Y'), -- 72
-        ('starxo', 'Patryk Kopczynski', NULL, 'Y'), -- 73
+        ('zeek', 'Aleksander Zygmunt', NULL, 'N'), -- 72
+        ('starxo', 'Patryk Kopczynski', NULL, 'N'), -- 73
         ('cNed', 'Patryk Kopczynski', NULL, 'N'), -- 74
-        ('Kiles', 'Vlad Shvets', NULL, 'Y'), -- 75
+        ('Kiles', 'Vlad Shvets', NULL, 'N'), -- 75
         ('BONECOLD', 'Santeri Sassi', NULL, 'N'), -- 76
         
         -- Gambit Esports (GMB)
         ('d3ffo', 'Nikita Sudakov', NULL, 'N'), -- 77
         ('nAts', 'Ayaz Akhmetshin', 'TL', 'Y'), -- 78
         ('Chronicle', 'Timofey Khromov', 'VIT', 'Y'), -- 79
-        ('Redgar', 'Igor Vlasov', NULL, 'Y'), -- 80
+        ('Redgar', 'Igor Vlasov', NULL, 'N'), -- 80
         ('sheydos', 'Bogdan Naumov', NULL, 'N'), -- 81
         
         -- Papara SuperMassive (SUP)
-        ('Turko', 'Mehmet Özen', NULL, 'Y'), -- 82
-        ('pAura', 'Melih Karaduran', NULL, 'Y'), -- 83
-        ('russ', 'Batuhan Malgaç', NULL, 'Y'), -- 84
-        ('Brave', 'Eren Kasırga', NULL, 'Y'), -- 85
-        ('Izzy', 'Baran Yılmaz', NULL, 'Y'), -- 86
+        ('Turko', 'Mehmet Özen', NULL, 'N'), -- 82
+        ('pAura', 'Melih Karaduran', NULL, 'N'), -- 83
+        ('russ', 'Batuhan Malgaç', NULL, 'N'), -- 84
+        ('Brave', 'Eren Kasırga', NULL, 'N'), -- 85
+        ('Izzy', 'Baran Yılmaz', NULL, 'N'), -- 86
         
         -- Liberty (LBR)
         ('krain', 'Gustavo Melara', NULL, 'N'), -- 87
         ('pleets', 'Marcelo Leite', NULL, 'N'), -- 88
-        ('shion', 'Gabriel Vilela', NULL, 'Y'), -- 89
+        ('shion', 'Gabriel Vilela', NULL, 'N'), -- 89
         ('Myssen', 'Rodrigo Myssen', NULL, 'N'), -- 90
-        ('liazzi', 'Felipe Galiazzi', NULL, 'Y'), -- 91
+        ('liazzi', 'Felipe Galiazzi', NULL, 'N'), -- 91
         
         -- Keyd Stars (VKS2)
-        ('murizzz', 'Murillo Tuchtenhagen', NULL, 'Y'), -- 92
+        ('murizzz', 'Murillo Tuchtenhagen', NULL, 'N'), -- 92
         ('JhoW', 'Jonathan Glória', NULL, 'N'), -- 93
         ('v1xen', 'Gabriel Martins', NULL, 'N'), -- 94
         ('ntk', 'Lucas Martins', NULL, 'N'), -- 95
@@ -576,11 +576,11 @@ VALUES	-- Masters Berlin 2021 added
         ('fiveK', 'Yoo Sung-min', NULL, 'N'), -- 97
         ('zunba', 'Kim Joon-hyuk', NULL, 'N'), -- 98
         ('Efina', 'Kim Nak-yeon', NULL, 'N'), -- 99
-        ('Esperanza', 'Jeong Jin-cheol', NULL, 'Y'), -- 100
+        ('Esperanza', 'Jeong Jin-cheol', NULL, 'N'), -- 100
         ('Bunny', 'Chae Joon-hyuk', NULL, 'N'), -- 101
         
         -- Team Secret
-        ('BORKUM', 'Jim Timbreza', NULL, 'Y'), -- 102
+        ('BORKUM', 'Jim Timbreza', NULL, 'N'), -- 102
         ('JessieVash', 'Jessie Cuyco', 'TS', 'Y'), -- 103
         ('dispenser', 'Kevin Te', NULL, 'N'), -- 104
         ('DubsteP', 'Jayvee Paguirigan', NULL, 'N'), -- 105
@@ -597,14 +597,14 @@ VALUES	-- Masters Berlin 2021 added
         ('Bazzi', 'Park Jun-ki', NULL, 'N'), -- 112
         ('ade', 'Teppei Kuno', NULL, 'N'), -- 113
         ('Fisker', 'Hideki Sasaki', NULL, 'N'), -- 114
-        ('Minty', 'Daiki Kato', NULL, 'Y'), -- 115
+        ('Minty', 'Daiki Kato', NULL, 'N'), -- 115
         
         -- ZETA DIVISION (ZETA)
         ('Laz', 'Ushida Koji', NULL, 'N'), -- 116
         ('crow', 'Maruoka Tomoaki', NULL, 'N'), -- 117
         ('barce', 'Takebayashi Ryo', NULL, 'N'), -- 118
         ('takej', 'Takemori Shogo', NULL, 'N'), -- 119
-        ('Reita', 'Oshiro Ryu', NULL, 'Y'), -- 120
+        ('Reita', 'Oshiro Ryu', NULL, 'N'), -- 120
         ('makiba', 'Miyamoto Akatsuki', NULL, 'N'); -- 121
 
 INSERT INTO team_history (player_id, start_date, team_id, end_date)
@@ -783,7 +783,7 @@ VALUES	(51, '2020-06-04', '100T', '2022-04-12'), -- Hiko
 INSERT INTO player (player_ign, player_name, team_id, active_status)
 VALUES	-- Valorant Champions 2021 added
 		-- Keyd Stars (VKS2)
-        ('mwzera', 'Leonardo Serrati', NULL, 'Y'), -- 122
+        ('mwzera', 'Leonardo Serrati', NULL, 'N'), -- 122
 
 		-- Team Liquid (TL)
         ('Nivera', 'Nabil Benrlitom', NULL, 'N'), -- 123
@@ -797,9 +797,9 @@ VALUES	-- Valorant Champions 2021 added
         -- FURIA (FUR)
         ('xand', 'Alexandre Zizi', NULL, 'N'), -- 128
         ('nzr', 'Agustin Ibarra', NULL, 'N'), -- 129
-        ('Quick', 'Gabriel Lima', NULL, 'Y'), -- 130
+        ('Quick', 'Gabriel Lima', NULL, 'N'), -- 130
         ('Khalil', 'Khalil Schmidt', NULL, 'N'), -- 131
-        ('mazin', 'Matheus Araújo', NULL, 'Y'), -- 132
+        ('mazin', 'Matheus Araújo', NULL, 'N'), -- 132
         
         -- FULL SENSE (FS)
         ('PTC', 'Kititkawin Rattanasukol', NULL, 'N'), -- 133
@@ -6090,19 +6090,19 @@ VALUES	-- Valorant Champions 2021 added
 INSERT INTO player (player_ign, player_name, team_id, active_status)
 VALUES	-- Masters Reykjavík 2022 added
 		-- FNATIC (FNC)
-        ('Enzo', 'Enzo Mestari', NULL, 'Y'), -- 138
-        ('H1ber', 'Joona Parviainen', NULL, 'Y'), -- 139
+        ('Enzo', 'Enzo Mestari', NULL, 'N'), -- 138
+        ('H1ber', 'Joona Parviainen', NULL, 'N'), -- 139
         
         -- DRX (DRX)
         ('Zest', 'Kim Ki-seok', NULL, 'N'), -- 140
         
         -- ZETA DIVISION (ZETA)
         ('Dep', 'Yuma Hashimoto', 'ZETA', 'Y'), -- 141
-        ('TENNN', 'Tenta Asai', NULL, 'Y'), -- 142
+        ('TENNN', 'Tenta Asai', NULL, 'N'), -- 142
         ('SugarZ3ro', 'Shota Watanabe', 'ZETA', 'Y'), -- 143
         
         -- XERXIA Esports (XIA)
-        ('Surf', 'Thanachart Rungapajaratkul', NULL, 'Y'), -- 144
+        ('Surf', 'Thanachart Rungapajaratkul', NULL, 'N'), -- 144
         
         -- Ninjas In Pyjamas (NIP)
         ('Jonn', 'Walney Reis', NULL, 'N'), -- 145
@@ -6110,7 +6110,7 @@ VALUES	-- Masters Reykjavík 2022 added
         ('cauanzin', 'Cauan Pereira', 'LOUD', 'Y'), -- 147
         
         -- G2 Esports (G2)
-        ('Meddo', 'Johan Renbjörk Lundborg', NULL, 'Y'), -- 148
+        ('Meddo', 'Johan Renbjörk Lundborg', NULL, 'N'), -- 148
         ('hoody', 'Aaro Peltokangas', NULL, 'N'), -- 149
         
         -- The Guard (TGRD)
@@ -6206,14 +6206,14 @@ VALUES	-- Masters Copenhagen 2022 added
         ('Zyppan', 'Pontus Eek', NULL, 'N'), -- 163
         ('ardiis', 'Ardis Svarenieks', NULL, 'N'), -- 164
         ('ANGE1', 'Kyrylo Karasov', NULL, 'N'), -- 165
-        ('SEIDER', 'Mathias Seider', NULL, 'Y'), -- 166
+        ('SEIDER', 'Mathias Seider', NULL, 'N'), -- 166
         ('Shao', 'Andrey Kiprsky', 'NAVI', 'Y'), -- 167
         
         -- NORTHEPTION (NTH)
         ('Derialy', 'Daichi Doi', NULL, 'N'), -- 168
-        ('JoXJo', 'Cho Byung-yeon', NULL, 'Y'), -- 169
+        ('JoXJo', 'Cho Byung-yeon', NULL, 'N'), -- 169
         ('xnfri', 'Tomoki Mariya', NULL, 'N'), -- 170
-        ('BlackWiz', 'Kohei Mikami', NULL, 'Y'), -- 171
+        ('BlackWiz', 'Kohei Mikami', NULL, 'N'), -- 171
         ('Meteor', 'Kim Tae-oh', 'T1', 'Y'), -- 172
         
         -- XSET (XSET)
@@ -6229,7 +6229,7 @@ VALUES	-- Masters Copenhagen 2022 added
         -- LEVIATÁN (LEV)
         ('Melser', 'Marco Eliot Machuca Amaro', NULL, 'N'), -- 179
         ('adverso', 'Benjamín Poblete', NULL, 'N'), -- 180
-        ('Tacolilla', 'Vicente Compagnon', NULL, 'Y'), -- 181
+        ('Tacolilla', 'Vicente Compagnon', NULL, 'N'), -- 181
         ('kiNgg', 'Francisco Aravena', 'LEV', 'Y'), -- 182
         ('Shyy', 'Fabian Usnayo', NULL, 'N'), -- 183
         
@@ -6312,22 +6312,22 @@ VALUES	-- Valorant Champions 2022 added
         ('dimasick', 'Dmitriy Matvienko', NULL, 'N'), -- 190
         
         -- FURIA (FUR)
-        ('dgzin', 'Douglas Silva', NULL, 'Y'), -- 191
+        ('dgzin', 'Douglas Silva', NULL, 'N'), -- 191
         
         -- EDward Gaming (EDG)
         ('nobody', 'Wang Senxu', 'EDG', 'Y'), -- 192
         ('Life', 'Qu Donghao', 'FPX', 'Y'), -- 193
         ('ZmjjKK', 'Zheng Yongkang', 'EDG', 'Y'), -- 194
-        ('Haodong', 'Guo Haodong', NULL, 'Y'), -- 195
+        ('Haodong', 'Guo Haodong', NULL, 'N'), -- 195
         ('Smoggy', 'Zhang Zhao', 'EDG', 'Y'), -- 196
         ('CHICHOO', 'Wan Shunzhi', 'EDG', 'Y'), -- 197
         
         -- BOOM Esports (BME)
         ('blaZek1ng', 'Gary Dastin', NULL, 'N'), -- 198
-        ('Famouz', 'Fikri Zaki Hamdani', 'BME', 'N'), -- 199
+        ('Famouz', 'Fikri Zaki Hamdani', 'BME', 'Y'), -- 199
         ('xffero', 'David Monangin', 'RRQ', 'Y'), -- 200
         ('Berserx', 'Rizkie Adla Kusuma', 'BME', 'Y'), -- 201
-        ('fl1pzjder', 'Saibani Rahmad', NULL, 'Y'); -- 202
+        ('fl1pzjder', 'Saibani Rahmad', NULL, 'N'); -- 202
 
 INSERT INTO team_history (player_id, start_date, team_id, end_date)
 VALUES	(185, '2022-07-30', 'ZETA', '2022-09-23'), -- Xdll
@@ -9335,11 +9335,11 @@ VALUES	-- Valorant Champions 2022 added
 INSERT INTO player (player_ign, player_name, team_id, active_status)
 VALUES	-- Masters Tokyo 2023
 		-- FUT Esports (FUT)
-		('AtaKaptan', 'Ata Tan', 'FUT', 'N'), -- 203
+		('AtaKaptan', 'Ata Tan', 'FUT', 'Y'), -- 203
         ('MrFaliN', 'Furkan Yeğen', 'FUT', 'Y'), -- 204
         ('MOJJ', 'Buğra Kiraz', NULL, 'N'), -- 205
         ('qRaxs', 'Doğukan Balaban', 'FUT', 'Y'), -- 206
-        ('qw1', 'Konuralp Şahin', NULL, 'Y'), -- 207
+        ('qw1', 'Konuralp Şahin', NULL, 'N'), -- 207
         
 		-- Evil Geniuses (EG)
  		('C0M', 'Corbin Lee', NULL, 'N'), -- 208
@@ -9351,17 +9351,17 @@ VALUES	-- Masters Tokyo 2023
         ('Foxy9', 'Jung Jae-sung', NULL, 'N'), -- 212      
         
 		-- Attacking Soul Esports (ASE)
-        ('YHchen', 'Chen Yuhan', NULL, 'Y'), -- 213     
-        ('monk', 'Wang Haoyu', NULL, 'Y'), -- 214     
+        ('YHchen', 'Chen Yuhan', NULL, 'N'), -- 213     
+        ('monk', 'Wang Haoyu', NULL, 'N'), -- 214     
         ('zjc', 'Zhang Juncheng', 'EDG', 'Y'), -- 215     
-        ('bunt', 'Jiang He', NULL, 'Y'), -- 216 
+        ('bunt', 'Jiang He', NULL, 'N'), -- 216 
         
 		-- T1        
         ('carpe', 'Lee Jae-hyeok', 'T1', 'Y'), -- 217    
-        ('ban', 'Joseph Seungmin Oh', NULL, 'Y'), -- 218   
+        ('ban', 'Joseph Seungmin Oh', NULL, 'N'), -- 218   
         
 		-- NRG        
-        ('s0m', 'Joseph Seungmin Oh', NULL, 'Y'), -- 219 
+        ('s0m', 'Sam Oh', NULL, 'N'), -- 219 
         
         -- PRX (Paper Rex)   
         ('cgrs', 'Patiphan Porsi', NULL, 'N'), -- 220         
@@ -9435,7 +9435,7 @@ VALUES	-- Valorant Champion 2023
         ('DaveeyS', 'Santiago Galvis Ruiz', NULL, 'N'), -- 233   
 
 		-- GX
-        ('Fit1nho', 'Adolfo Gallego', NULL, 'Y'), -- 234    
+        ('Fit1nho', 'Adolfo Gallego', NULL, 'N'), -- 234    
 		('rhyme', ' Emir Muminovic', NULL, 'N'), -- 235    
         ('Cloud', 'Kirill Nehozhin', 'GX', 'Y'); -- 236
 
@@ -11604,7 +11604,7 @@ VALUES	-- Masters Shanghai 2024
         ('Wo0t', 'Mert Alkan', 'TH', 'Y'), -- 257               
         
         -- DRG
-        ('TvirusLuke', 'Chen Cheng-ching', NULL, 'Y'), -- 258
+        ('TvirusLuke', 'Chen Cheng-ching', NULL, 'N'), -- 258
         ('vo0kashu', 'Ilya Ushakov', 'DRG', 'Y'), -- 259     
         ('Shion7', 'Zhang Haozhe', NULL, 'N'), -- 260   
         ('Nicc', 'Shao Yi-qun', 'DRG', 'Y'), -- 261  
@@ -11647,7 +11647,7 @@ VALUES	-- Valorant Champions 2024
         ('BeYN', 'Kang Ha-bin', 'DRX', 'Y'), -- 264
         
         -- KRU       
-        ('mta', 'Nicolás González', NULL, 'Y'), -- 265
+        ('mta', 'Nicolás González', NULL, 'N'), -- 265
         
         -- FNC       
         ('hiro', 'Emirhan Kat', 'NAVI', 'Y'), -- 266   
@@ -11658,11 +11658,11 @@ VALUES	-- Valorant Champions 2024
 
         -- TLN
  		('primmie', 'Papaphat Sriprapha', 'TLN', 'Y'), -- 269
-        ('Governor', 'Peter No', NULL, 'Y'), -- 270
+        ('Governor', 'Peter No', NULL, 'N'), -- 270
         ('JitBoyS', 'Jittana Nokngam', 'TLN', 'Y'), -- 271    
         
         -- VIT
- 		('runneR', 'Emil Trajkovski', 'GX', 'N'), -- 272
+ 		('runneR', 'Emil Trajkovski', NULL, 'N'), -- 272
         ('ceNder', 'Jokūbas Labutis', NULL, 'Y'), -- 273
         ('Kicks', 'Kimmie Laasner', 'VIT', 'Y'), -- 274    
         
@@ -11673,7 +11673,7 @@ VALUES	-- Valorant Champions 2024
         ('heybay', 'Ho Shun Hei', 'TE', 'Y'), -- 278  
         
         -- EDG       
-        ('S1Mon', 'Hsien Meng-Hsun', NULL, 'Y'); -- 279   
+        ('S1Mon', 'Hsien Meng-Hsun', NULL, 'N'); -- 279   
 
 INSERT INTO team_history (player_id, start_date, team_id, end_date)
 VALUES	(263, '2023-12-12', 'DRX', '2024-04-04'), -- Flashback  
@@ -14593,7 +14593,7 @@ VALUES	-- Masters Toronto 2025
         
 		-- RRQ
         ('Kushy', 'Bryan Carlos Setiawan', 'RRQ', 'Y'), -- 303
-        ('Jemkin', 'Maksim Batorov', 'RRQ', 'N'), -- 304
+        ('Jemkin', 'Maksim Batorov', 'RRQ', 'Y'), -- 304
         ('crazyguy', 'Ngô Công Anh', 'RRQ', 'Y'), -- 305
         
 		-- FNC
