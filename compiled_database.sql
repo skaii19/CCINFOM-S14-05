@@ -1219,8 +1219,8 @@ JOIN maps mp ON m.map_played = mp.map_id
 ORDER BY match_date;
 
 INSERT INTO agents (agent_name)
-VALUES	('Brimstone1'), ('Viper1'), ('Omen1'), ('Killjoy1'), ('Cypher1'), ('Sova1'), ('Sage1'), ('Phoenix1'), ('Jett1'), ('Reyna1'), ('Raze1'), ('Breach1'), ('Skye1'), ('Yoru1'), ('Astra1'),
-		('KAY/O1'), ('Chamber1'), ('Neon1'), ('Fade1'), ('Harbor1'), ('Gekko1'), ('Deadlock1'), ('Iso1'), ('Clove1'), ('Vyse1'), ('Tejo1'), ('Waylay1');
+VALUES	('Brimstone'), ('Viper'), ('Omen'), ('Killjoy'), ('Cypher'), ('Sova'), ('Sage'), ('Phoenix'), ('Jett'), ('Reyna'), ('Raze'), ('Breach'), ('Skye'), ('Yoru'), ('Astra'),
+		('KAY/O'), ('Chamber'), ('Neon'), ('Fade'), ('Harbor'), ('Gekko'), ('Deadlock'), ('Iso'), ('Clove'), ('Vyse'), ('Tejo'), ('Waylay');
         
 SELECT * FROM agents;
 
