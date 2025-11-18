@@ -4,7 +4,7 @@ from views.main_window import MainWindow
 from controllers.team_controller import TeamController
 # from controllers.tournament_controller import TournamentController
 from controllers.customer_controller import CustomerController
-from controller.merchandise_controller import MerchandiseController
+from controllers.merchandise_controller import MerchandiseController
 
 # Create the Qt application
 app = QApplication([])
