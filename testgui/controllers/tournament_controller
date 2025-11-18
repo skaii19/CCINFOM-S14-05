@@ -2,8 +2,8 @@ from PySide6.QtWidgets import QMessageBox
 from datetime import date
 from model.tournament_model import TournamentModel
 from model.tournament_location_model import TournamentLocationModel
-from view.add_tournament import Ui_addTournamentDialog
 from view.tournament_form import TournamentForm
+
 
 class TournamentController:
     def __init__(self, view):
@@ -15,6 +15,7 @@ class TournamentController:
 
         # Prevent garbage collection of forms
         self.forms = []
+        self.details_windows = []
 
         # Connect signals from the view
         self.view.add_clicked.connect(self.add_tournament)
@@ -28,61 +29,77 @@ class TournamentController:
         tournaments = self.tournament_model.load_tournaments()
         self.view.fill(tournaments)
 
-    # ----------------- Add Tournament -----------------
+    # Add Tournament 
     def add_tournament(self):
-        form = TournamentForm()
+        print("DEBUG: Opening Add Tournament dialog")
+        form = TournamentForm()                         
         form.saved.connect(self.save_new_tournament)
-        form.show()
-        self.forms.append(form)
+        form.show() 
+        self.forms.append(form)                      
+        print("DEBUG: Add Tournament dialog closed")
+
 
     def save_new_tournament(self, data):
-        name = data["name"]
-        ttype = data["type"]
-        start = data["start_date"]
-        prize = data["prize_pool"]
-        country = data["country"]
-        city = data["city"]
-        venue = data["venue"]
+        try:
+            name = data["tournament_name"]
+            ttype = data["tournament_type"]
+            start = data["start_date"]
+            prize = data["prize_pool"]
+            country = data["country"]
+            city = data["city"]
+            venue = data["venue"]
 
-        year = start.year
+            year = start.year
 
-        # Generate tournament ID
-        if ttype.lower() == "masters":
-            existing_ids = self.tournament_model.get_tournaments_by_type_and_year("Masters", year)
-            number = len(existing_ids) + 1
-            tid = f"{year}_M{number}"
-        elif ttype.lower() == "champions":
-            existing_ids = self.tournament_model.get_tournaments_by_type_and_year("Champions", year)
-            if existing_ids:
-                QMessageBox.warning(None, "Error", f"Champions tournament already exists for {year}")
+            # Generate tournament ID
+            if ttype.lower() == "masters":
+                existing_ids = self.tournament_model.get_tournaments_by_type_and_year("Masters", year)
+                number = len(existing_ids) + 1
+                tid = f"{year}_M{number}"
+            elif ttype.lower() == "champions":
+                existing_ids = self.tournament_model.get_tournaments_by_type_and_year("Champions", year)
+                if existing_ids:
+                    QMessageBox.warning(None, "Error", f"Champions tournament already exists for {year}")
+                    return
+                tid = f"{year}_C1"
+            else:
+                QMessageBox.warning(None, "Error", "Invalid tournament type")
                 return
-            tid = f"{year}_C1"
-        else:
-            QMessageBox.warning(None, "Error", "Invalid tournament type")
-            return
 
-        # Save to DB
-        end_date = None
-        self.tournament_model.add_tournament(tid, name, ttype, prize, start, end_date)
-        self.location_model.add_location(tid, venue, city, country)
+            # Save to DB
+            end_date = None
+            self.tournament_model.add_tournament(tid, name, ttype, prize, start, end_date)
+            self.location_model.add_location(tid, venue, city, country)
 
-        # Reload table
-        self.load_table()
+            # Reload table
+            self.load_table()
+        except Exception as e:
+                QMessageBox.critical(None, "Error", f"Failed to save tournament: {e}")
+
 
     # ----------------- Edit Tournament -----------------
     def edit_tournament(self, tournament_id):
         tournament = self.tournament_model.get_tournament(tournament_id)
         location = self.location_model.get_location(tournament_id)
 
-        form = TournamentForm(existing={**tournament, **location})
+        existing_data = {
+            "tournament_name": tournament.get("tournament_name", ""),
+            "tournament_type": tournament.get("tournament_type", ""),
+            "prize_pool": tournament.get("prize_pool", 0),
+            "start_date": tournament.get("start_date", date.today()),
+            "venue": location.get("venue", ""),
+            "city": location.get("city", ""),
+            "country": location.get("country", "")
+        }
+        form = TournamentForm(existing=existing_data)
         form.saved.connect(lambda data: self.save_edit_tournament(tournament_id, data))
-        form.show()
         self.forms.append(form)
+        form.show()
 
     def save_edit_tournament(self, tid, data):
         # Grab data
-        name = data["name"]
-        ttype = data["type"]
+        name = data["tournament_name"]
+        ttype = data["tournament_type"]
         start = data["start_date"]
         prize = data["prize_pool"]
         country = data["country"]
@@ -108,10 +125,4 @@ class TournamentController:
             self.location_model.delete_location(tournament_id)
             self.load_table()
 
-    # # ----------------- Show Details -----------------
-    # def show_tournament_details(self, tournament_id):
-    #     tournament = self.tournament_model.get_tournament(tournament_id)
-    #     location = self.location_model.get_location(tournament_id)
 
-    #  
-    #     print("Tournament details:", {**tournament, **location})
