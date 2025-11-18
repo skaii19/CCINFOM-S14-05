@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QApplication
 from views.main_window import MainWindow
 # from controllers.player_controller import PlayerController
 from controllers.team_controller import TeamController
-from controller.tournament_controller import TournamentController
+from controllers.tournament_controller import TournamentController
 
 # Create the Qt application
 app = QApplication([])
