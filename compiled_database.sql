@@ -375,6 +375,488 @@ VALUES	-- Masters Reykjavik 2021
         ('Sushiboys', 'Panyawat Subsiriroj', NULL, 'Y'), -- 48
         ('Crws', 'Thanamethk Mahatthananuyut', 'TLN', 'Y'), -- 49
         ('sScary', 'Nutchapon Matarat', NULL, 'N'); -- 50
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Berlin 2021 added
+        -- 100 Thieves (100T)
+        ('Hiko', 'Spencer Martin', NULL, 'N'), -- 51
+        ('Asuna', 'Peter Mazuryk', NULL, 'N'), -- 52
+        ('nitr0', 'Nick Cannella', NULL, 'N'), -- 53
+        ('steel', 'Joshua Nissan', NULL, 'N'), -- 54
+        ('Ethan', 'Ethan Arnold', 'NRG', 'Y'), -- 55
+        
+        -- ENVY (NV)
+        ('crashies', 'Austin Roberts', 'FNC', 'Y'), -- 56
+        ('Victor', 'Victor Wong', NULL, 'N'), -- 57
+        ('Marved', 'Jimmy Nguyen', NULL, 'N'), -- 58
+        ('FiNESSE', 'Pujan Mehta', NULL, 'N'), -- 59
+        ('yay', 'Jaccob Whiteaker', NULL, 'N'), -- 60
+        
+        -- Vision Strikers (VS)
+        ('stax', 'Kim Gu-taek', 'T1', 'Y'), -- 61
+        ('Rb', 'Goo Sang-min', NULL, 'N'), -- 62
+        ('k1Ng', 'Lee Seung-won', NULL, 'N'), -- 63
+        ('BuZz', 'Yu Byeong-cheol', 'T1', 'Y'), -- 64
+        ('MaKo', 'Kim Myeong-gwan', 'DRX', 'Y'), -- 65
+        
+        -- G2 Esports (G2)
+        ('Mixwell', 'Oscar Cañellas', NULL, 'N'), -- 66
+        ('koldamenta', 'Jose Luis Aranguren', NULL, 'N'), -- 67
+        ('AvovA', 'Auni Chahade', NULL, 'N'), -- 68
+        ('nukkye', 'Žygimantas Chmieliauskas', NULL, 'N'), -- 69
+        ('keloqz', 'Cista Wassim', NULL, 'N'), -- 70
+        
+        -- KRU Esports (KRU)
+        ('keznit', 'Angelo Mori', NULL, 'N'), -- 71
+        
+        -- Acend (ACE)
+        ('zeek', 'Aleksander Zygmunt', NULL, 'N'), -- 72
+        ('starxo', 'Patryk Kopczynski', NULL, 'N'), -- 73
+        ('cNed', 'Patryk Kopczynski', NULL, 'N'), -- 74
+        ('Kiles', 'Vlad Shvets', NULL, 'N'), -- 75
+        ('BONECOLD', 'Santeri Sassi', NULL, 'N'), -- 76
+        
+        -- Gambit Esports (GMB)
+        ('d3ffo', 'Nikita Sudakov', NULL, 'N'), -- 77
+        ('nAts', 'Ayaz Akhmetshin', 'TL', 'Y'), -- 78
+        ('Chronicle', 'Timofey Khromov', 'VIT', 'Y'), -- 79
+        ('Redgar', 'Igor Vlasov', NULL, 'N'), -- 80
+        ('sheydos', 'Bogdan Naumov', NULL, 'N'), -- 81
+        
+        -- Papara SuperMassive (SUP)
+        ('Turko', 'Mehmet Özen', NULL, 'N'), -- 82
+        ('pAura', 'Melih Karaduran', NULL, 'N'), -- 83
+        ('russ', 'Batuhan Malgaç', NULL, 'N'), -- 84
+        ('Brave', 'Eren Kasırga', NULL, 'N'), -- 85
+        ('Izzy', 'Baran Yılmaz', NULL, 'N'), -- 86
+        
+        -- Liberty (LBR)
+        ('krain', 'Gustavo Melara', NULL, 'N'), -- 87
+        ('pleets', 'Marcelo Leite', NULL, 'N'), -- 88
+        ('shion', 'Gabriel Vilela', NULL, 'N'), -- 89
+        ('Myssen', 'Rodrigo Myssen', NULL, 'N'), -- 90
+        ('liazzi', 'Felipe Galiazzi', NULL, 'N'), -- 91
+        
+        -- Keyd Stars (VKS2)
+        ('murizzz', 'Murillo Tuchtenhagen', NULL, 'N'), -- 92
+        ('JhoW', 'Jonathan Glória', NULL, 'N'), -- 93
+        ('v1xen', 'Gabriel Martins', NULL, 'N'), -- 94
+        ('ntk', 'Lucas Martins', NULL, 'N'), -- 95
+        ('heat', 'Olavo Marcelo', 'FUR', 'Y'), -- 96
+        
+        -- F4Q (F4Q)
+        ('fiveK', 'Yoo Sung-min', NULL, 'N'), -- 97
+        ('zunba', 'Kim Joon-hyuk', NULL, 'N'), -- 98
+        ('Efina', 'Kim Nak-yeon', NULL, 'N'), -- 99
+        ('Esperanza', 'Jeong Jin-cheol', NULL, 'N'), -- 100
+        ('Bunny', 'Chae Joon-hyuk', NULL, 'N'), -- 101
+        
+        -- Team Secret
+        ('BORKUM', 'Jim Timbreza', NULL, 'N'), -- 102
+        ('JessieVash', 'Jessie Cuyco', 'TS', 'Y'), -- 103
+        ('dispenser', 'Kevin Te', NULL, 'N'), -- 104
+        ('DubsteP', 'Jayvee Paguirigan', NULL, 'N'), -- 105
+        ('Witz', 'Riley Go', NULL, 'N'), -- 106
+        
+        -- Paper Rex (PRX)
+        ('mindfreak', 'Aaron Leonhart', NULL, 'N'), -- 107
+        ('f0rsakeN', 'Jason Susanto', 'PRX', 'Y'), -- 108
+        ('Benkai', 'Benedict Tan', NULL, 'N'), -- 109
+        ('d4v41', 'Khalish Rusyaidee', 'PRX', 'Y'), -- 110
+        ('shiba', 'Zhan Teng Toh', NULL, 'N'), -- 111
+        
+        -- Crazy Raccoon (CR)
+        ('Bazzi', 'Park Jun-ki', NULL, 'N'), -- 112
+        ('ade', 'Teppei Kuno', NULL, 'N'), -- 113
+        ('Fisker', 'Hideki Sasaki', NULL, 'N'), -- 114
+        ('Minty', 'Daiki Kato', NULL, 'N'), -- 115
+        
+        -- ZETA DIVISION (ZETA)
+        ('Laz', 'Ushida Koji', NULL, 'N'), -- 116
+        ('crow', 'Maruoka Tomoaki', NULL, 'N'), -- 117
+        ('barce', 'Takebayashi Ryo', NULL, 'N'), -- 118
+        ('takej', 'Takemori Shogo', NULL, 'N'), -- 119
+        ('Reita', 'Oshiro Ryu', NULL, 'N'), -- 120
+        ('makiba', 'Miyamoto Akatsuki', NULL, 'N'); -- 121
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Valorant Champions 2021 added
+		-- Keyd Stars (VKS2)
+        ('mwzera', 'Leonardo Serrati', NULL, 'N'), -- 122
+
+		-- Team Liquid (TL)
+        ('Nivera', 'Nabil Benrlitom', NULL, 'N'), -- 123
+        
+        -- Cloud9 (C9)
+        ('xeta', 'Son Seon-ho', NULL, 'N'), -- 124
+        ('mitch', 'Mitch Semago', NULL, 'N'), -- 125
+        ('Xeppaa', 'Erick Bach', 'C9', 'Y'), -- 126
+        ('leaf', 'Nathan Orf', 'G2', 'Y'), -- 127
+        
+        -- FURIA (FUR)
+        ('xand', 'Alexandre Zizi', NULL, 'N'), -- 128
+        ('nzr', 'Agustin Ibarra', NULL, 'N'), -- 129
+        ('Quick', 'Gabriel Lima', NULL, 'N'), -- 130
+        ('Khalil', 'Khalil Schmidt', NULL, 'N'), -- 131
+        ('mazin', 'Matheus Araújo', NULL, 'N'), -- 132
+        
+        -- FULL SENSE (FS)
+        ('PTC', 'Kititkawin Rattanasukol', NULL, 'N'), -- 133
+        ('SuperBusS', 'Nattawat Yoosawat', NULL, 'N'), -- 134
+        ('SantaGolf', 'Chanitpak Suwanaprateep', NULL, 'N'), -- 135
+		('JohnOlsen', 'Chanawin Nakchain', NULL, 'N'), -- 136
+        ('LAMMYSNAX', 'Elamrahim Khanpathan', NULL, 'N'); -- 137
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Reykjavík 2022 added
+		-- FNATIC (FNC)
+        ('Enzo', 'Enzo Mestari', NULL, 'N'), -- 138
+        ('H1ber', 'Joona Parviainen', NULL, 'N'), -- 139
+        
+        -- DRX (DRX)
+        ('Zest', 'Kim Ki-seok', NULL, 'N'), -- 140
+        
+        -- ZETA DIVISION (ZETA)
+        ('Dep', 'Yuma Hashimoto', 'ZETA', 'Y'), -- 141
+        ('TENNN', 'Tenta Asai', NULL, 'N'), -- 142
+        ('SugarZ3ro', 'Shota Watanabe', 'ZETA', 'Y'), -- 143
+        
+        -- XERXIA Esports (XIA)
+        ('Surf', 'Thanachart Rungapajaratkul', NULL, 'N'), -- 144
+        
+        -- Ninjas In Pyjamas (NIP)
+        ('Jonn', 'Walney Reis', NULL, 'N'), -- 145
+        ('bezn1', 'Gabriel Luiz da Costa', NULL, 'N'), -- 146
+        ('cauanzin', 'Cauan Pereira', 'LOUD', 'Y'), -- 147
+        
+        -- G2 Esports (G2)
+        ('Meddo', 'Johan Renbjörk Lundborg', NULL, 'N'), -- 148
+        ('hoody', 'Aaro Peltokangas', NULL, 'N'), -- 149
+        
+        -- The Guard (TGRD)
+        ('valyn', 'Jacob Batio', 'G2', 'Y'), -- 150
+        ('Sayaplayer', 'Ha Jeong-woo', NULL, 'N'), -- 151
+        ('JonahP', 'Jonah Pulice', 'G2', 'Y'), -- 152
+        ('neT', 'Michael Bernet', NULL, 'N'), -- 153
+        ('trent', 'Trent Cairns', 'G2', 'Y'), -- 154
+        
+        -- Paper Rex (PRX)
+        ('Jinggg', 'Wang Jing Jie', 'PRX', 'Y'), -- 155
+        
+        -- LOUD (LOUD)
+        ('pANcada', 'Bryan Luna', 'LOUD', 'Y'), -- 156
+        ('Less', 'Felipe de Loyola Basso', 'VIT', 'Y'), -- 157
+        ('aspas', 'Erick Santos', 'MIBR', 'Y'); -- 158
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Copenhagen 2022 added
+        -- Guild Esports (GLD)
+        ('Sayf', 'Saif Jibraeel', 'VIT', 'Y'), -- 159
+        ('Russ', 'Russel Mendes', NULL, 'N'), -- 160
+        ('Leo', 'Leo Jannesson', NULL, 'N'), -- 161
+        ('trexx', 'Nikita Cherednichenko', NULL, 'N'), -- 162
+        
+        -- FunPlus Phoenix (FPX)
+        ('Zyppan', 'Pontus Eek', NULL, 'N'), -- 163
+        ('ardiis', 'Ardis Svarenieks', NULL, 'N'), -- 164
+        ('ANGE1', 'Kyrylo Karasov', NULL, 'N'), -- 165
+        ('SEIDER', 'Mathias Seider', NULL, 'N'), -- 166
+        ('Shao', 'Andrey Kiprsky', 'NAVI', 'Y'), -- 167
+        
+        -- NORTHEPTION (NTH)
+        ('Derialy', 'Daichi Doi', NULL, 'N'), -- 168
+        ('JoXJo', 'Cho Byung-yeon', NULL, 'N'), -- 169
+        ('xnfri', 'Tomoki Mariya', NULL, 'N'), -- 170
+        ('BlackWiz', 'Kohei Mikami', NULL, 'N'), -- 171
+        ('Meteor', 'Kim Tae-oh', 'T1', 'Y'), -- 172
+        
+        -- XSET (XSET)
+        ('AYRIN', 'Jordan He', NULL, 'N'), -- 173
+        ('BcJ', 'Brendan Jensen', NULL, 'N'), -- 174
+        ('dephh', 'Rory Jackson', NULL, 'N'), -- 175
+        ('zekken', 'Zachary Patrone', NULL, 'N'), -- 176
+        ('Cryocells', 'Matthew Panganiban', '100T', 'Y'), -- 177
+        
+        -- FNATIC (FNC)
+        ('Alfajer', 'Emir Ali Beder', 'FNC', 'Y'), -- 178
+        
+        -- LEVIATÁN (LEV)
+        ('Melser', 'Marco Eliot Machuca Amaro', NULL, 'N'), -- 179
+        ('adverso', 'Benjamín Poblete', NULL, 'N'), -- 180
+        ('Tacolilla', 'Vicente Compagnon', NULL, 'N'), -- 181
+        ('kiNgg', 'Francisco Aravena', 'LEV', 'Y'), -- 182
+        ('Shyy', 'Fabian Usnayo', NULL, 'N'), -- 183
+        
+        -- FunPlus Phoenix (FPX)
+        ('SUYGETSU', 'Dmitry Ilyushin', 'KC', 'Y'); -- 184
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Valorant Champions 2022 added
+		-- ZETA DIVISION (ZETA)
+		('Xdll', 'Yuto Mizomori', 'ZETA', 'Y'), -- 185
+        
+        -- 100 Thieves (100T)
+        ('stellar', 'Brenden McGrath', NULL, 'N'), -- 186
+        ('Will', 'William Cheng', NULL, 'N'), -- 187
+        ('Derrek', 'Derrek Ha', NULL, 'N'), -- 188
+        ('bang', 'Sean Bezerra', NULL, 'N'), -- 189
+        
+        -- Team Liquid (TL)
+        ('dimasick', 'Dmitriy Matvienko', NULL, 'N'), -- 190
+        
+        -- FURIA (FUR)
+        ('dgzin', 'Douglas Silva', NULL, 'N'), -- 191
+        
+        -- EDward Gaming (EDG)
+        ('nobody', 'Wang Senxu', 'EDG', 'Y'), -- 192
+        ('Life', 'Qu Donghao', 'FPX', 'Y'), -- 193
+        ('ZmjjKK', 'Zheng Yongkang', 'EDG', 'Y'), -- 194
+        ('Haodong', 'Guo Haodong', NULL, 'N'), -- 195
+        ('Smoggy', 'Zhang Zhao', 'EDG', 'Y'), -- 196
+        ('CHICHOO', 'Wan Shunzhi', 'EDG', 'Y'), -- 197
+        
+        -- BOOM Esports (BME)
+        ('blaZek1ng', 'Gary Dastin', NULL, 'N'), -- 198
+        ('Famouz', 'Fikri Zaki Hamdani', 'BME', 'Y'), -- 199
+        ('xffero', 'David Monangin', 'RRQ', 'Y'), -- 200
+        ('Berserx', 'Rizkie Adla Kusuma', 'BME', 'Y'), -- 201
+        ('fl1pzjder', 'Saibani Rahmad', NULL, 'N'); -- 202
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Tokyo 2023
+		-- FUT Esports (FUT)
+		('AtaKaptan', 'Ata Tan', 'FUT', 'Y'), -- 203
+        ('MrFaliN', 'Furkan Yeğen', 'FUT', 'Y'), -- 204
+        ('MOJJ', 'Buğra Kiraz', NULL, 'N'), -- 205
+        ('qRaxs', 'Doğukan Balaban', 'FUT', 'Y'), -- 206
+        ('qw1', 'Konuralp Şahin', NULL, 'N'), -- 207
+        
+		-- Evil Geniuses (EG)
+ 		('C0M', 'Corbin Lee', NULL, 'N'), -- 208
+        ('jawgemo', 'Alexander Mor', 'G2', 'Y'), -- 209
+        ('Demon1', 'Max Mazanov', 'DRG', 'N'), -- 210
+        ('Boostio', 'Kelden Pupello', NULL, 'N'), -- 211            
+ 
+ 		-- DRX
+        ('Foxy9', 'Jung Jae-sung', NULL, 'N'), -- 212      
+        
+		-- Attacking Soul Esports (ASE)
+        ('YHchen', 'Chen Yuhan', NULL, 'N'), -- 213     
+        ('monk', 'Wang Haoyu', NULL, 'N'), -- 214     
+        ('zjc', 'Zhang Juncheng', 'EDG', 'Y'), -- 215     
+        ('bunt', 'Jiang He', NULL, 'N'), -- 216 
+        
+		-- T1        
+        ('carpe', 'Lee Jae-hyeok', 'T1', 'Y'), -- 217    
+        ('ban', 'Joseph Seungmin Oh', NULL, 'N'), -- 218   
+        
+		-- NRG        
+        ('s0m', 'Sam Oh', NULL, 'N'), -- 219 
+        
+        -- PRX (Paper Rex)   
+        ('cgrs', 'Patiphan Porsi', NULL, 'N'), -- 220         
+        
+        -- LOUD
+        ('tuyz', 'Arthur Andrade', NULL, 'N'); -- 221
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Valorant Champion 2023
+        -- FPX
+		('AAAAY', 'Zhang Yang', 'FPX', 'Y'), -- 222
+        ('Lysoar', 'Liang Youhao', NULL, 'N'), -- 223
+        ('Yuicaw', 'Huang Yung-chieh', NULL, 'N'), -- 224
+        ('nizhaoTZH', 'Tang Zehao', NULL, 'N'), -- 225
+        ('BerLIN', 'Zhang Bolin', 'FPX', 'Y'), -- 226       
+       
+      -- BLG
+		('Biank', 'Zhong Jianfe', 'TE', 'Y'), -- 227
+        ('whzy', 'Wang Haozhe', 'BLG', 'Y'), -- 228
+        ('rin', 'Li Le Wei', NULL, 'N'), -- 229
+        ('yosemite', 'Wang Lei', 'FPX', 'Y'), -- 230
+        ('Knight', 'Liu Yuxiang', 'BLG', 'Y'), -- 231      
+       
+       -- PRX
+        ('something', 'Ilya Petrov', 'PRX', 'Y'), -- 232    
+        
+		-- KRU
+        ('DaveeyS', 'Santiago Galvis Ruiz', NULL, 'N'), -- 233   
+
+		-- GX
+        ('Fit1nho', 'Adolfo Gallego', NULL, 'N'), -- 234    
+		('rhyme', ' Emir Muminovic', NULL, 'N'), -- 235    
+        ('Cloud', 'Kirill Nehozhin', 'GX', 'Y'); -- 236
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Madrid 2024 
+        -- KC
+ 		('N4RRATE', 'Marshall Massey', 'SEN', 'Y'), -- 237
+        ('marteen', 'Martin Pátek', 'KC', 'Y'), -- 238
+        ('sh1n', 'Ryad Ensaad', NULL, 'N'), -- 239
+        ('tomaszy', 'Tomás Machado', NULL, 'N'), -- 240       
+        
+		-- FPX
+        ('Autumn', 'Kale Dunne', 'FPX', 'Y'), -- 241
+        
+        -- GEN
+        ('t3xture', 'Kim Na-ra', 'GEN', 'Y'), -- 242
+        ('Karon', 'Kim Won-tae', 'GEN', 'Y'), -- 243               
+			
+        -- PRX
+        ('Monyet', 'Cahya Nugraha', 'RRQ', 'Y'), -- 244               
+        
+        -- SEN
+        ('johnqt', 'Mohamed Amine Ouarid', 'SEN', 'Y'), -- 245        
+        
+        -- TH
+        ('MiniBoo', 'Dominykas Lukaševičius', NULL, 'N'), -- 246      
+        ('Boo', 'Ričardas Lukaševičius', 'TH', 'Y'), -- 247      
+        ('benjyfishy', 'Benjamin David Fish', 'TH', 'Y'), -- 248      
+        ('RieNs', 'Enes Ecirli', 'TH', 'Y'), -- 249      
+        ('paTiTek', 'Patryk Fabrowski', NULL, 'N'); -- 250
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Shanghai 2024 
+		-- G2 
+        ('icy', 'Kale Dunne', 'FPX', 'Y'), -- 251
+        
+        -- T1
+ 		('xccurate', 'Kevin Susanto', NULL, 'N'), -- 252
+        ('iZu', 'Ham Woo-ju', 'T1', 'Y'), -- 253
+        ('Rossy', 'Daniel Abedrabbo', NULL, 'N'), -- 254     
+   
+        -- FUT
+        ('yetujey', 'Eray Budak', 'FUT', 'Y'), -- 255
+        
+		-- LEV
+        ('tex', 'Ian Botsch', NULL, 'N'), -- 256             
+			
+        -- TH
+        ('Wo0t', 'Mert Alkan', 'TH', 'Y'), -- 257               
+        
+        -- DRG
+        ('TvirusLuke', 'Chen Cheng-ching', NULL, 'N'), -- 258
+        ('vo0kashu', 'Ilya Ushakov', 'DRG', 'Y'), -- 259     
+        ('Shion7', 'Zhang Haozhe', NULL, 'N'), -- 260   
+        ('Nicc', 'Shao Yi-qun', 'DRG', 'Y'), -- 261  
+        
+        -- 100T       
+        ('eeiu', 'Daniel Vucenovic', NULL, 'N'); -- 262
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Valorant Champions 2024
+        -- DRX
+        ('Flashback', 'Cho Min-hyuk', 'DRX', 'Y'), -- 263
+        ('BeYN', 'Kang Ha-bin', 'DRX', 'Y'), -- 264
+        
+        -- KRU       
+        ('mta', 'Nicolás González', NULL, 'N'), -- 265
+        
+        -- FNC       
+        ('hiro', 'Emirhan Kat', 'NAVI', 'Y'), -- 266   
+        
+        -- BLG
+        ('nephh', 'Marcus Tan', 'BLG', 'Y'), -- 267
+        ('Flex1n', 'Lo Rui', 'BLG', 'Y'), -- 268
+
+        -- TLN
+ 		('primmie', 'Papaphat Sriprapha', 'TLN', 'Y'), -- 269
+        ('Governor', 'Peter No', NULL, 'N'), -- 270
+        ('JitBoyS', 'Jittana Nokngam', 'TLN', 'Y'), -- 271    
+        
+        -- VIT
+ 		('runneR', 'Emil Trajkovski', NULL, 'N'), -- 272
+        ('ceNder', 'Jokūbas Labutis', NULL, 'Y'), -- 273
+        ('Kicks', 'Kimmie Laasner', 'VIT', 'Y'), -- 274    
+        
+        -- TE
+        ('LuoK1ng', 'Zhang Zhanpeng', 'TE', 'Y'), -- 275
+        ('Kai', 'Lu Zhinan', 'TE', 'Y'), -- 276
+        ('FengF ', 'Song Xuefeng', 'TE', 'Y'), -- 277   
+        ('heybay', 'Ho Shun Hei', 'TE', 'Y'), -- 278  
+        
+        -- EDG       
+        ('S1Mon', 'Hsien Meng-Hsun', NULL, 'N'); -- 279   
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Bangkok 2025
+		-- TL
+        ('kamo', 'Kamil Frąckowiak', 'TL', 'Y'), -- 280
+        ('keiko', 'Georgio Sanassy', 'TL', 'Y'), -- 281
+        ('kamyk', 'Maks Rychlewski', NULL, 'N'), -- 282   
+        
+		-- DRX
+        ('free1ng', 'No Ha-jun', 'DRX', 'Y'), -- 283
+        ('HYUNMIN', 'Song Hyun-min', 'DRX', 'Y'), -- 284
+        
+ 		-- T1
+        ('Sylvan', 'Go Young-sup', 'TS', 'Y'); -- 285
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Masters Toronto 2025
+ 		-- PRX
+        ('PatMen', 'Patrick Mendoza', 'PRX', 'Y'), -- 286
+        
+		-- BLG
+        ('rushia', 'Wang Xiaojie', 'BLG', 'Y'), -- 287
+        ('Levius', 'Lu Yinzhong', 'BLG', 'Y'), -- 288       
+        
+		-- TL
+        ('Serial', 'Maikls Zdanovs', NULL, 'N'), -- 289
+        
+		-- WOL
+        ('SiuFatBB', 'Pong Gaa Hei', 'WOL', 'Y'), -- 290        
+        ('Juicy', 'Tyler James Aeria', NULL, 'N'), -- 291
+        ('Spring', 'Liu Jiunting', 'WOL', 'Y'), -- 292   
+
+		-- GEN
+        ('Ash', 'Ha Hyun-cheol', 'GEN', 'Y'), -- 293
+        
+		-- MIBR
+        ('Verno', 'Andrew Maust', 'MIBR', 'Y'), -- 294
+        ('cortezia', 'Gabriel Cortez', 'SEN', 'Y'), -- 295
+        ('xenom', 'Eduardo Soeiro', 'MIBR', 'Y'), -- 296      
+        ('artzin', 'Arthur Araujo', NULL, 'N'), -- 297        
+  
+ 		-- XLG
+        ('happywei', 'Deng Minwei', 'XLG', 'Y'), -- 298
+        ('Rarga', 'Arthur Churyumov', 'XLG', 'Y'), -- 299
+        ('coconut', 'Colin Patrick Chung', 'XLG', 'Y'), -- 300      
+        ('Midi', 'Zhang Jiajun', NULL, 'N'), -- 301      
+        ('Viva', 'Lifan Ran', 'XLG', 'Y'), -- 302
+        
+		-- RRQ
+        ('Kushy', 'Bryan Carlos Setiawan', 'RRQ', 'Y'), -- 303
+        ('Jemkin', 'Maksim Batorov', 'RRQ', 'Y'), -- 304
+        ('crazyguy', 'Ngô Công Anh', 'RRQ', 'Y'), -- 305
+        
+		-- FNC
+        ('kaajak', 'Kajetan Haremski', 'FNC', 'Y'); -- 306     
+        
+INSERT INTO player (player_ign, player_name, team_id, active_status)
+VALUES	-- Valorant Champions 2025
+		-- XLG
+         ('NoMan', 'James Man', 'XLG', 'Y'), -- 307
+         
+ 		-- GX
+        ('ara', 'Hanceriuc Eduard-George', 'GX', 'Y'), -- 308
+        ('westside', 'Miłosz Duda', 'GX', 'Y'), -- 309
+        ('Flickless', 'Karel Maeckelbergh', 'GX', 'Y'), -- 310      
+        ('grubinho', 'Grzegorz Ryczko', 'GX', 'Y'), -- 311  
+        
+ 		-- NRG
+        ('mada', 'Adam Pampuch', 'NRG', 'Y'), -- 312
+        ('skuba', 'Logan Jenkins', 'NRG', 'Y'), -- 313
+        ('brawk', 'Brock Somerhalder', 'NRG', 'Y'), -- 314     
+			
+ 		-- EDG
+        ('Jieni7', 'Zhang Juntai', 'EDG', 'Y'), -- 315    
+        
+ 		-- DRX
+        ('SpiritZ1', 'Lin Dingyu', 'DRG', 'Y'), -- 316
+        ('Akeman', 'Zhang Haoran', 'DRG', 'Y'), -- 317
+        
+ 		-- T1
+        ('DH', 'Kang Dong-ho', 'T1', 'Y'); -- 318       
 
 INSERT INTO team_history (player_id, start_date, team_id, end_date)
 VALUES	(1, '2020-04-28', 'SEN', '2022-10-06'), -- ShahZam
@@ -503,109 +985,6 @@ VALUES	(1, '2020-04-28', 'SEN', '2022-10-06'), -- ShahZam
 		(50, '2020-12-16', 'X10', '2021-11-18'), -- sScary  
 		(50, '2021-11-18', 'X10', '2022-01-04'), -- sScary  
 		(50, '2022-01-17', 'XIA', '2022-10-16'); -- sScary
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Berlin 2021 added
-        -- 100 Thieves (100T)
-        ('Hiko', 'Spencer Martin', NULL, 'N'), -- 51
-        ('Asuna', 'Peter Mazuryk', NULL, 'N'), -- 52
-        ('nitr0', 'Nick Cannella', NULL, 'N'), -- 53
-        ('steel', 'Joshua Nissan', NULL, 'N'), -- 54
-        ('Ethan', 'Ethan Arnold', 'NRG', 'Y'), -- 55
-        
-        -- ENVY (NV)
-        ('crashies', 'Austin Roberts', 'FNC', 'Y'), -- 56
-        ('Victor', 'Victor Wong', NULL, 'N'), -- 57
-        ('Marved', 'Jimmy Nguyen', NULL, 'N'), -- 58
-        ('FiNESSE', 'Pujan Mehta', NULL, 'N'), -- 59
-        ('yay', 'Jaccob Whiteaker', NULL, 'N'), -- 60
-        
-        -- Vision Strikers (VS)
-        ('stax', 'Kim Gu-taek', 'T1', 'Y'), -- 61
-        ('Rb', 'Goo Sang-min', NULL, 'N'), -- 62
-        ('k1Ng', 'Lee Seung-won', NULL, 'N'), -- 63
-        ('BuZz', 'Yu Byeong-cheol', 'T1', 'Y'), -- 64
-        ('MaKo', 'Kim Myeong-gwan', 'DRX', 'Y'), -- 65
-        
-        -- G2 Esports (G2)
-        ('Mixwell', 'Oscar Cañellas', NULL, 'N'), -- 66
-        ('koldamenta', 'Jose Luis Aranguren', NULL, 'N'), -- 67
-        ('AvovA', 'Auni Chahade', NULL, 'N'), -- 68
-        ('nukkye', 'Žygimantas Chmieliauskas', NULL, 'N'), -- 69
-        ('keloqz', 'Cista Wassim', NULL, 'N'), -- 70
-        
-        -- KRU Esports (KRU)
-        ('keznit', 'Angelo Mori', NULL, 'N'), -- 71
-        
-        -- Acend (ACE)
-        ('zeek', 'Aleksander Zygmunt', NULL, 'N'), -- 72
-        ('starxo', 'Patryk Kopczynski', NULL, 'N'), -- 73
-        ('cNed', 'Patryk Kopczynski', NULL, 'N'), -- 74
-        ('Kiles', 'Vlad Shvets', NULL, 'N'), -- 75
-        ('BONECOLD', 'Santeri Sassi', NULL, 'N'), -- 76
-        
-        -- Gambit Esports (GMB)
-        ('d3ffo', 'Nikita Sudakov', NULL, 'N'), -- 77
-        ('nAts', 'Ayaz Akhmetshin', 'TL', 'Y'), -- 78
-        ('Chronicle', 'Timofey Khromov', 'VIT', 'Y'), -- 79
-        ('Redgar', 'Igor Vlasov', NULL, 'N'), -- 80
-        ('sheydos', 'Bogdan Naumov', NULL, 'N'), -- 81
-        
-        -- Papara SuperMassive (SUP)
-        ('Turko', 'Mehmet Özen', NULL, 'N'), -- 82
-        ('pAura', 'Melih Karaduran', NULL, 'N'), -- 83
-        ('russ', 'Batuhan Malgaç', NULL, 'N'), -- 84
-        ('Brave', 'Eren Kasırga', NULL, 'N'), -- 85
-        ('Izzy', 'Baran Yılmaz', NULL, 'N'), -- 86
-        
-        -- Liberty (LBR)
-        ('krain', 'Gustavo Melara', NULL, 'N'), -- 87
-        ('pleets', 'Marcelo Leite', NULL, 'N'), -- 88
-        ('shion', 'Gabriel Vilela', NULL, 'N'), -- 89
-        ('Myssen', 'Rodrigo Myssen', NULL, 'N'), -- 90
-        ('liazzi', 'Felipe Galiazzi', NULL, 'N'), -- 91
-        
-        -- Keyd Stars (VKS2)
-        ('murizzz', 'Murillo Tuchtenhagen', NULL, 'N'), -- 92
-        ('JhoW', 'Jonathan Glória', NULL, 'N'), -- 93
-        ('v1xen', 'Gabriel Martins', NULL, 'N'), -- 94
-        ('ntk', 'Lucas Martins', NULL, 'N'), -- 95
-        ('heat', 'Olavo Marcelo', 'FUR', 'Y'), -- 96
-        
-        -- F4Q (F4Q)
-        ('fiveK', 'Yoo Sung-min', NULL, 'N'), -- 97
-        ('zunba', 'Kim Joon-hyuk', NULL, 'N'), -- 98
-        ('Efina', 'Kim Nak-yeon', NULL, 'N'), -- 99
-        ('Esperanza', 'Jeong Jin-cheol', NULL, 'N'), -- 100
-        ('Bunny', 'Chae Joon-hyuk', NULL, 'N'), -- 101
-        
-        -- Team Secret
-        ('BORKUM', 'Jim Timbreza', NULL, 'N'), -- 102
-        ('JessieVash', 'Jessie Cuyco', 'TS', 'Y'), -- 103
-        ('dispenser', 'Kevin Te', NULL, 'N'), -- 104
-        ('DubsteP', 'Jayvee Paguirigan', NULL, 'N'), -- 105
-        ('Witz', 'Riley Go', NULL, 'N'), -- 106
-        
-        -- Paper Rex (PRX)
-        ('mindfreak', 'Aaron Leonhart', NULL, 'N'), -- 107
-        ('f0rsakeN', 'Jason Susanto', 'PRX', 'Y'), -- 108
-        ('Benkai', 'Benedict Tan', NULL, 'N'), -- 109
-        ('d4v41', 'Khalish Rusyaidee', 'PRX', 'Y'), -- 110
-        ('shiba', 'Zhan Teng Toh', NULL, 'N'), -- 111
-        
-        -- Crazy Raccoon (CR)
-        ('Bazzi', 'Park Jun-ki', NULL, 'N'), -- 112
-        ('ade', 'Teppei Kuno', NULL, 'N'), -- 113
-        ('Fisker', 'Hideki Sasaki', NULL, 'N'), -- 114
-        ('Minty', 'Daiki Kato', NULL, 'N'), -- 115
-        
-        -- ZETA DIVISION (ZETA)
-        ('Laz', 'Ushida Koji', NULL, 'N'), -- 116
-        ('crow', 'Maruoka Tomoaki', NULL, 'N'), -- 117
-        ('barce', 'Takebayashi Ryo', NULL, 'N'), -- 118
-        ('takej', 'Takemori Shogo', NULL, 'N'), -- 119
-        ('Reita', 'Oshiro Ryu', NULL, 'N'), -- 120
-        ('makiba', 'Miyamoto Akatsuki', NULL, 'N'); -- 121
 
 INSERT INTO team_history (player_id, start_date, team_id, end_date)
 VALUES	(51, '2020-06-04', '100T', '2022-04-12'), -- Hiko
@@ -780,34 +1159,6 @@ VALUES	(51, '2020-06-04', '100T', '2022-04-12'), -- Hiko
 		(121, '2021-07-08', 'ZETA', '2021-12-01'), -- makiba
 		(121, '2022-12-10', 'CR', '2023-11-28'); -- makiba
 
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Valorant Champions 2021 added
-		-- Keyd Stars (VKS2)
-        ('mwzera', 'Leonardo Serrati', NULL, 'N'), -- 122
-
-		-- Team Liquid (TL)
-        ('Nivera', 'Nabil Benrlitom', NULL, 'N'), -- 123
-        
-        -- Cloud9 (C9)
-        ('xeta', 'Son Seon-ho', NULL, 'N'), -- 124
-        ('mitch', 'Mitch Semago', NULL, 'N'), -- 125
-        ('Xeppaa', 'Erick Bach', 'C9', 'Y'), -- 126
-        ('leaf', 'Nathan Orf', 'G2', 'Y'), -- 127
-        
-        -- FURIA (FUR)
-        ('xand', 'Alexandre Zizi', NULL, 'N'), -- 128
-        ('nzr', 'Agustin Ibarra', NULL, 'N'), -- 129
-        ('Quick', 'Gabriel Lima', NULL, 'N'), -- 130
-        ('Khalil', 'Khalil Schmidt', NULL, 'N'), -- 131
-        ('mazin', 'Matheus Araújo', NULL, 'N'), -- 132
-        
-        -- FULL SENSE (FS)
-        ('PTC', 'Kititkawin Rattanasukol', NULL, 'N'), -- 133
-        ('SuperBusS', 'Nattawat Yoosawat', NULL, 'N'), -- 134
-        ('SantaGolf', 'Chanitpak Suwanaprateep', NULL, 'N'), -- 135
-		('JohnOlsen', 'Chanawin Nakchain', NULL, 'N'), -- 136
-        ('LAMMYSNAX', 'Elamrahim Khanpathan', NULL, 'N'); -- 137
-
 INSERT INTO team_history (player_id, start_date, team_id, end_date)
 VALUES	(122, '2021-10-25', 'VKS2', '2022-10-20'), -- mwzera  
 		(122, '2022-10-21', 'FUR', '2025-03-11'), -- mwzera  
@@ -845,6 +1196,419 @@ VALUES	(122, '2021-10-25', 'VKS2', '2022-10-20'), -- mwzera
 		(136, '2021-04-16', 'FS', '2025-01-10'), -- JohnOlsen
 		(137, '2021-04-16', 'FS', '2022-12-22'), -- LAMMYSNAX
 		(137, '2023-08-25', 'FS', '2023-10-24'); -- LAMMYSNAX
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(138, '2020-07-14', 'NIP', '2020-09-17'), -- Enzo
+		(138, '2022-03-31', 'FNC', '2022-05-09'), -- Enzo
+		(138, '2022-05-09', 'FNC', '2022-09-22'), -- Enzo
+		(138, '2023-11-04', 'TL', '2024-08-30'), -- Enzo
+		(139, '2022-04-01', 'FNC', '2022-04-27'), -- H1ber
+		(139, '2022-05-07', 'VIT', '2022-09-22'), -- H1ber
+
+		(140, '2020-06-07', 'VS', '2021-07-13'), -- Zest
+		(140, '2022-01-04', 'VS', '2022-01-07'), -- Zest
+		(140, '2022-01-07', 'DRX', '2023-12-12'), -- Zest
+
+		(141, '2021-12-01', 'ZETA', '2025-04-13'), -- Dep
+		(141, '2025-05-13', 'ZETA', NULL), -- Dep
+		(142, '2021-07-03', 'NTH', '2021-12-01'), -- TENNN
+		(142, '2021-12-01', 'ZETA', '2022-07-30'), -- TENNN
+		(142, '2022-09-01', 'ZETA', '2023-09-29'), -- TENNN
+		(143, '2021-02-06', 'NTH', '2021-12-01'), -- SugarZ3ro
+		(143, '2021-12-01', 'ZETA', NULL), -- SugarZ3ro
+
+		(144, '2022-01-17', 'XIA', '2023-03-31'), -- Surf
+		(144, '2024-01-19', 'TLN', '2024-11-16'), -- Surf
+
+		(145, '2022-01-16', 'NIP', '2022-09-21'), -- Jonn
+		(146, '2022-01-16', 'NIP', '2022-09-21'), -- bezn1
+		(147, '2022-01-16', 'NIP', '2022-09-21'), -- cauanzin
+		(147, '2022-11-10', 'LOUD', NULL), -- cauanzin
+
+		(148, '2020-08-12', 'FPX', '2020-12-08'), -- Meddo
+		(148, '2021-01-16', 'GIA', '2021-11-18'), -- Meddo
+		(148, '2021-12-23', 'G2', '2022-09-21'), -- Meddo
+		(149, '2021-01-16', 'GIA', '2021-11-18'), -- hoody
+		(149, '2021-12-23', 'G2', '2022-09-21'), -- hoody
+		(149, '2022-11-10', 'GIA', '2023-12-14'), -- hoody
+		(149, '2023-12-14', 'GX', '2024-09-06'), -- hoody
+
+		(150, '2021-11-05', 'TGRD', '2022-09-21'), -- valyn
+		(150, '2023-01-09', 'TGRD', '2023-09-01'), -- valyn
+		(150, '2023-09-22', 'G2', NULL), -- valyn
+		(151, '2020-10-14', 'T1', '2021-06-25'), -- Sayaplayer
+		(151, '2021-12-14', 'TGRD', '2022-09-21'), -- Sayaplayer
+		(151, '2022-10-22', 'T1', '2024-07-25'), -- Sayaplayer
+		(152, '2021-12-13', 'TGRD', '2022-09-21'), -- JonahP
+		(152, '2023-01-09', 'TGRD', '2023-09-01'), -- JonahP
+		(152, '2023-09-22', 'G2', NULL), -- JonahP
+		(153, '2021-11-05', 'TGRD', '2022-09-21'), -- neT
+		(153, '2023-01-09', 'TGRD', '2023-09-01'), -- neT
+		(153, '2023-09-22', 'G2', '2024-04-03'), -- neT
+		(153, '2024-12-19', 'C9', '2025-10-08'), -- neT
+		(154, '2022-01-17', 'TGRD', '2023-09-01'), -- trent
+		(154, '2023-09-22', 'G2', NULL), -- trent
+
+		(155, '2021-09-28', 'PRX', '2023-10-06'), -- Jinggg
+		(155, '2023-10-06', 'PRX', '2024-03-29'), -- Jinggg
+		(155, '2024-03-29', 'PRX', NULL), -- Jinggg
+
+		(156, '2022-02-03', 'LOUD', '2022-10-15'), -- pANcada
+		(156, '2022-10-15', 'SEN', '2024-02-09'), -- pANcada
+		(156, '2024-02-09', 'SEN', '2024-03-07'), -- pANcada
+		(156, '2024-06-12', 'LOUD', NULL), -- pANcada
+		(157, '2022-02-03', 'LOUD', '2024-10-16'), -- Less
+		(157, '2024-10-16', 'VIT', NULL), -- Less
+		(158, '2022-02-03', 'LOUD', '2023-09-11'), -- aspas
+		(158, '2023-10-11', 'LEV', '2024-11-27'), -- aspas
+		(158, '2024-11-27', 'MIBR', NULL); -- aspas
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(159, '2020-09-17', 'NIP', '2020-12-17'), -- Sayf
+		(159, '2021-01-20', 'GLD', '2022-09-22'), -- Sayf
+		(159, '2022-11-11', 'TL', '2023-09-29'), -- Sayf
+		(159, '2023-09-29', 'VIT', '2025-06-16'), -- Sayf
+		(159, '2025-08-18', 'VIT', NULL), -- Sayf
+		(160, '2022-01-07', 'GLD', '2022-08-03'), -- Russ
+		(161, '2020-10-21', 'GLD', '2022-10-16'), -- Leo
+		(161, '2022-10-16', 'FNC', '2024-06-15'), -- Leo
+		(162, '2022-01-07', 'GLD', '2022-09-22'), -- trexx
+		(162, '2024-01-30', 'VIT', '2025-03-18'), -- trexx
+		(162, '2025-07-12', 'TL', '2025-10-24'), -- trexx
+
+		(163, '2020-04-18', 'NIP', '2020-06-04'), -- Zyppan
+		(163, '2020-08-12', 'FPX', '2022-11-07'), -- Zyppan
+		(163, '2022-11-08', 'NAVI', '2024-08-30'), -- Zyppan
+		(164, '2020-07-03', 'G2', '2021-06-02'), -- ardiis
+		(164, '2021-06-04', 'TH', '2021-07-18'), -- ardiis
+		(164, '2021-12-02', 'FPX', '2022-11-07'), -- ardiis
+		(164, '2022-11-11', 'NRG', '2023-10-11'), -- ardiis
+		(164, '2023-10-11', 'NAVI', '2024-09-03'), -- ardiis
+		(165, '2020-08-12', 'FPX', '2022-11-07'), -- ANGE1
+		(165, '2022-11-08', 'NAVI', '2025-09-05'), -- ANGE1
+		(166, '2022-07-09', 'FPX', '2022-07-24'), -- SEIDER
+		(167, '2020-08-12', 'FPX', '2022-11-07'), -- Shao
+		(167, '2022-11-08', 'NAVI', NULL), -- Shao
+
+		(168, '2022-04-16', 'NTH', '2023-09-12'), -- Derialy
+		(169, '2022-02-08', 'NTH', '2022-10-13'), -- JoXJo
+		(170, '2022-02-08', 'NTH', '2022-10-24'), -- xnfri
+		(171, '2022-02-08', 'NTH', '2023-07-25'), -- BlackWiz
+		(172, '2022-02-08', 'NTH', '2022-09-28'), -- Meteor
+		(172, '2022-10-21', 'GEN', '2024-10-07'), -- Meteor
+		(172, '2024-10-12', 'T1', NULL), -- Meteor
+
+		(173, '2020-10-26', 'XSET', '2022-09-22'), -- AYRIN
+		(174, '2021-01-14', 'XSET', '2022-09-22'), -- BcJ
+		(174, '2022-11-11', 'EG', '2023-09-06'), -- BcJ
+		(175, '2021-06-14', 'XSET', '2022-09-22'), -- dephh
+		(175, '2022-10-18', 'SEN', '2023-05-12'), -- dephh
+		(176, '2021-06-26', 'XSET', '2022-09-22'), -- zekken
+		(176, '2022-10-05', 'SEN', '2025-11-01'), -- zekken
+		(177, '2021-12-31', 'XSET', '2022-09-24'), -- Cryocells
+		(177, '2022-09-29', '100T', '2025-09-15'), -- Cryocells
+		(177, '2025-11-05', '100T', NULL), -- Cryocells
+		(178, '2022-05-09', 'FNC', NULL), -- Alfajer
+
+		(179, '2021-11-18', 'LEV', '2022-09-27'), -- Melser
+		(179, '2022-10-21', 'KRU', '2025-09-06'), -- Melser
+		(180, '2021-11-18', 'LEV', '2022-09-27'), -- adverso
+		(180, '2024-11-06', 'KRU', '2025-07-11'), -- adverso
+		(181, '2021-11-18', 'LEV', '2023-09-11'), -- Tacolilla
+		(181, '2023-11-03', 'KRU', '2023-11-12'), -- Tacolilla
+		(182, '2021-11-18', 'LEV', NULL), -- kiNgg
+		(183, '2022-06-02', 'LEV', '2023-10-09'), -- Shyy
+		(183, '2023-10-13', 'KRU', '2025-09-20'), -- Shyy
+
+		(184, '2021-10-09', 'FPX', '2022-11-07'), -- SUYGETSU
+		(184, '2022-11-08', 'NAVI', '2024-09-04'), -- SUYGETSU
+		(184, '2024-11-09', 'KC', NULL); -- SUYGETSU
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(185, '2022-07-30', 'ZETA', '2022-09-23'), -- Xdll
+		(185, '2024-10-16', 'ZETA', NULL), -- Xdll
+
+		(186, '2022-04-14', '100T', '2023-09-12'), -- stellar
+		(187, '2022-04-14', '100T', '2022-09-29'), -- Will
+		(188, '2022-04-14', '100T', '2023-09-12'), -- Derrek
+		(188, '2024-01-26', 'EG', '2025-10-06'), -- Derrek
+		(189, '2022-02-21', '100T', '2022-04-14'), -- bang
+		(189, '2022-04-14', '100T', '2024-10-03'), -- bang
+		(189, '2024-10-07', 'SEN', '2025-10-22'), -- bang
+
+		(190, '2021-01-04', 'FPX', '2021-08-26'), -- dimasick
+		(190, '2022-08-05', 'TL', '2023-09-12'), -- dimasick
+
+		(191, '2022-07-22', 'FUR', '2023-08-28'), -- dgzin
+		(191, '2024-11-16', 'LOUD', '2025-05-17'), -- dgzin
+
+		(192, '2021-09-07', 'EDG', NULL), -- nobody
+		(193, '2020-11-01', 'EDG', '2022-11-04'), -- Life
+		(193, '2022-11-04', 'ASE', '2024-01-13'), -- Life
+		(193, '2024-01-13', 'FPX', NULL), -- Life
+		(194, '2021-09-09', 'EDG', NULL), -- ZmjjKK
+		(195, '2020-08-05', 'EDG', '2024-10-19'), -- Haodong
+		(196, '2022-07-16', 'EDG', NULL), -- Smoggy
+		(197, '2021-05-01', 'EDG', NULL), -- CHICHOO
+
+		(198, '2020-07-15', 'BME', '2023-08-01'), -- blaZek1ng
+		(199, '2022-07-19', 'BME', '2022-09-20'), -- Famouz
+		(199, '2022-10-27', 'BME', NULL), -- Famouz
+		(200, '2021-10-06', 'BME', '2022-09-23'), -- xffero
+		(200, '2022-10-09', 'RRQ', NULL), -- xffero
+		(201, '2021-10-06', 'BME', NULL), -- BerserX
+		(202, '2021-06-21', 'BME', '2022-09-22'), -- fl1pzjder
+		(202, '2022-10-15', 'RRQ', '2024-05-03'); -- fl1pzjder
+        
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(203, '2022-10-25', 'FUT', '2025-07-14'), -- AtaKaptan
+		(203, '2025-10-05', 'FUT', NULL), -- AtaKaptan
+		(204, '2022-01-06', 'FUT', NULL), -- MrFaliN
+		(205, '2020-10-12', 'FUT', '2023-09-11'), -- MOJJ
+		(205, '2023-11-19', 'SUP', '2024-04-21'), -- MOJJ
+		(206, '2021-02-21', 'FUT', NULL), -- qRaxs
+		(207, '2021-09-24', 'FUT', '2023-09-20'), -- qw1
+
+		(208, '2022-04-21', 'EG', '2024-01-08'), -- C0M
+		(208, '2024-01-09', 'LEV', '2025-09-04'), -- C0M
+		(209, '2022-01-27', 'EG', '2024-10-04'), -- jawgemo
+		(209, '2024-10-07', 'G2', NULL), -- jawgemo
+		(210, '2023-01-19', 'EG', '2023-12-23'), -- Demon1
+		(210, '2023-12-23', 'NRG', '2024-05-25'), -- Demon1
+		(210, '2024-05-25', 'NRG', '2024-10-09'), -- Demon1
+		(210, '2024-10-11', 'LEV', '2025-05-02'), -- Demon1
+		(210, '2025-09-05', 'DRG', NULL), -- Demon1
+		(211, '2021-09-27', 'EG', '2024-01-08'), -- Boostio
+		(211, '2024-01-08', '100T', '2025-07-19'), -- Boostio
+
+   		(212, '2022-10-13', 'DRX', '2024-10-07'), -- Foxy9
+		(212, '2024-10-24', 'GEN', '2025-10-29'), -- Foxy9
+
+  		(213, '2022-02-21', 'ASE', '2024-03-27'), -- YHchen
+		(214, '2021-06-03', 'ASE', '2024-01-17'), -- monk
+		(215, '2021-08-10', 'ASE', '2024-01-14'), -- zjc
+		(215, '2025-06-24', 'EDG', NULL), -- zjc
+		(216, '2022-03-25', 'ASE', '2024-01-17'), -- bunt
+
+		(217, '2022-11-11', 'T1', NULL), -- carpe
+		(218, '2022-08-10', 'T1', '2023-09-12'), -- ban
+		(218, '2023-11-17', 'TLN', '2025-02-21'), -- ban
+
+		(219, '2020-10-07', 'NRG', '2023-09-14'), -- s0m
+		(219, '2024-05-30', 'NRG', '2025-10-22'), -- s0m
+
+		(220, '2022-10-22', 'PRX', '2023-09-11'), -- cgrs
+
+		(221, '2022-11-10', 'LOUD', '2025-05-15'), -- tuyz
+		(221, '2025-05-16', 'FUR', '2025-05-25'), -- tuyz
+		(221, '2025-07-14', 'FUR', '2025-09-27'); -- tuyz
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(222, '2023-01-09', 'FPX', NULL), -- AAAAY
+		(223, '2023-03-21', 'FPX', '2024-10-15'), -- Lysoar  
+		(223, '2024-10-15', 'WOL', '2025-10-20'), -- Lysoar  
+		(224, '2023-01-09', 'FPX', '2023-09-19'), -- Yuicaw  
+		(224, '2023-09-19', 'ASE', '2024-01-17'), -- Yuicaw  
+		(224, '2024-01-17', 'WOL', '2025-09-29'), -- Yuicaw  
+		(225, '2023-01-09', 'FPX', '2024-01-12'), -- nizhaoTZH  
+		(225, '2024-01-12', 'DRG', '2025-01-02'), -- nizhaoTZH  
+		(226, '2023-01-09', 'FPX', '2025-03-04'), -- BerLIN  
+		(226, '2025-04-28', 'FPX', NULL), -- BerLIN  
+
+		(227, '2023-04-11', 'BLG', '2024-06-11'), -- Biank  
+		(227, '2024-06-11', 'TE', NULL), -- Biank  
+		(228, '2023-02-20', 'BLG', NULL), -- whzy  
+		(229, '2023-02-20', 'BLG', '2024-01-16'), -- rin  
+		(230, '2023-04-25', 'BLG', '2024-10-30'), -- yosemite  
+		(230, '2024-10-30', 'FPX', NULL), -- yosemite  
+		(231, '2023-04-25', 'BLG', NULL), -- Knight  
+
+		(232, '2023-03-22', 'PRX', NULL), -- something  
+
+		(233, '2022-10-21', 'KRU', '2023-09-04'), -- DaveeyS  
+
+		(234, '2020-06-26', 'GIA', '2021-01-16'), -- Fit1nho  
+		(234, '2021-02-26', 'GIA', '2023-12-14'), -- Fit1nho  
+		(234, '2023-12-14', 'GX', '2024-09-06'), -- Fit1nho  
+		(235, '2020-04-12', 'NIP', '2020-06-25'), -- rhyme  
+		(235, '2020-06-25', 'NIP', '2021-11-02'), -- rhyme  
+		(235, '2021-12-21', 'GEN', '2022-07-22'), -- rhyme  
+		(235, '2022-08-30', 'FPX', '2022-09-19'), -- rhyme  
+		(235, '2022-11-10', 'GIA', '2023-09-06'), -- rhyme  
+		(236, '2021-06-18', 'NAVI', '2022-09-23'), -- Cloud  
+		(236, '2022-11-10', 'GIA', '2023-12-14'), -- Cloud  
+		(236, '2023-12-14', 'GX', NULL); -- Cloud  
+        
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(237, '2023-12-12', 'KC', '2024-10-07'), -- N4RRATE  
+		(237, '2024-10-07', 'SEN', NULL), -- N4RRATE  
+		(238, '2023-12-12', 'KC', NULL), -- marteen  
+		(239, '2022-05-05', 'KC', '2022-09-30'), -- sh1n  
+		(239, '2022-11-11', 'KC', '2024-09-11'), -- sh1n  
+		(240, '2023-12-12', 'KC', '2024-09-10'), -- tomaszy  
+		(240, '2024-11-26', 'GX', '2025-04-16'), -- tomaszy  
+
+ 		(241, '2023-09-19', 'FPX', NULL), -- Autumn  
+
+		(242, '2023-09-26', 'GEN', '2025-10-21'), -- t3xture  
+		(242, '2025-10-25', 'GEN', NULL), -- t3xture  
+		(243, '2023-11-23', 'GEN', '2025-10-21'), -- Karon  
+		(243, '2025-10-24', 'GEN', NULL), -- Karon  
+
+		(244, '2023-09-16', 'PRX', '2024-03-29'), -- Monyet  
+		(244, '2024-03-29', 'PRX', '2024-05-20'), -- Monyet  
+		(244, '2024-05-20', 'RRQ', NULL), -- Monyet  
+
+		(245, '2023-09-13', 'SEN', NULL), -- johnqt  
+
+   		(246, '2023-10-10', 'TH', '2025-10-09'), -- MiniBoo  
+		(247, '2021-01-16', 'GIA', '2021-07-05'), -- Boo  
+		(247, '2022-11-10', 'TH', NULL), -- Boo  
+		(248, '2023-07-12', 'TH', NULL), -- benjyfishy  
+		(249, '2023-10-10', 'TH', NULL), -- RieNs  
+		(250, '2020-06-24', 'G2', '2021-06-02'), -- paTiTek  
+		(250, '2021-06-04', 'TH', '2021-09-24'), -- paTiTek  
+		(250, '2023-12-15', 'TH', '2024-04-23'), -- paTiTek  
+		(250, '2024-05-17', 'TH', '2024-06-09'), -- paTiTek  
+		(250, '2024-11-29', 'TL', '2025-10-17'); -- paTiTek  
+        
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(251, '2023-06-16', 'EG', '2023-09-06'), -- icy  
+		(251, '2024-04-04', 'G2', '2024-09-26'), -- icy  
+		(251, '2024-12-20', 'EG', '2025-10-22'), -- icy  
+
+		(252, '2023-09-12', 'T1', '2025-01-08'), -- xccurate  
+		(253, '2023-09-12', 'T1', NULL), -- iZu  
+		(254, '2023-11-10', 'T1', '2024-10-08'), -- Rossy  
+		(254, '2024-10-08', 'C9', '2024-12-02'), -- Rossy  
+		(254, '2025-03-04', 'LEV', '2025-05-02'), -- Rossy  
+
+ 		(255, '2023-10-12', 'FUT', NULL), -- yetujey  
+
+		(256, '2021-03-24', 'NRG', '2022-09-30'), -- tex  
+		(256, '2023-01-09', 'TGRD', '2023-09-01'), -- tex  
+		(256, '2023-10-12', 'LEV', '2025-09-04'), -- tex  
+
+		(257, '2023-10-10', 'TH', NULL), -- Wo0t  
+
+		(258, '2023-03-22', 'DRG', '2025-03-09'), -- TvirusLuke  
+		(259, '2023-09-06', 'DRG', NULL), -- vo0kashu  
+		(260, '2023-11-05', 'DRG', '2023-11-26'), -- Shion7  
+		(260, '2024-01-18', 'DRG', '2024-11-27'), -- Shion7  
+		(261, '2023-03-22', 'DRG', NULL), -- Nicc  
+
+		(262, '2020-10-14', 'NRG', '2022-09-30'), -- eeiu  
+		(262, '2023-11-01', '100T', '2025-10-31'); -- eeiu  
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(263, '2023-12-12', 'DRX', '2024-04-04'), -- Flashback  
+		(263, '2024-05-30', 'DRX', '2025-04-23'), -- Flashback  
+		(263, '2025-07-07', 'DRX', NULL), -- Flashback  
+		(264, '2022-04-01', 'F4Q', '2022-10-20'), -- BeYN  
+		(264, '2023-03-27', 'DRX', '2024-10-07'), -- BeYN  
+		(264, '2025-01-05', 'DRX', NULL), -- BeYN  
+
+		(265, '2023-10-13', 'KRU', '2024-03-25'), -- mta  
+		(265, '2024-07-01', 'KRU', '2025-01-17'), -- mta  
+
+		(266, '2023-11-24', 'SUP', '2024-06-15'), -- hiro  
+		(266, '2024-06-15', 'FNC', '2024-09-03'), -- hiro  
+		(266, '2024-12-03', 'NAVI', NULL), -- hiro  
+
+		(267, '2023-02-02', 'X10', '2023-03-14'), -- nephh  
+		(267, '2024-06-05', 'BLG', NULL), -- nephh  
+		(268, '2023-06-23', 'TE', '2024-03-27'), -- Flex1n  
+		(268, '2024-06-11', 'BLG', '2024-10-08'), -- Flex1n  
+		(268, '2024-11-28', 'DRG', NULL), -- Flex1n  
+
+		(269, '2024-07-10', 'TLN', NULL), -- primmie  
+		(270, '2023-11-17', 'TLN', '2025-02-21'), -- Governor  
+		(271, '2022-10-25', 'TLN', NULL), -- JitBoyS  
+
+		(272, '2023-09-16', 'VIT', '2024-10-07'), -- runneR  
+		(272, '2024-11-26', 'GX', '2025-04-16'), -- runneR  
+		(273, '2021-02-04', 'VIT', '2024-11-01'), -- ceNder  
+		(274, '2023-09-26', 'VIT', '2025-11-06'), -- Kicks  
+
+		(275, '2024-03-27', 'TE', NULL), -- LuoK1ng  
+		(276, '2023-03-22', 'BLG', '2023-09-06'), -- Kai  
+		(276, '2023-09-06', 'TE', NULL), -- Kai  
+		(277, '2023-06-23', 'TE', NULL), -- FengF  
+		(278, '2023-06-23', 'TE', NULL), -- heybay  
+
+		(279, '2024-06-25', 'EDG', '2025-04-18'); -- S1Mon  
+        
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(280, '2024-10-15', 'TL', NULL), -- kamo  
+		(281, '2023-11-04', 'TL', NULL), -- keiko  
+		(282, '2023-01-13', 'FNC', '2023-09-14'), -- kamyk  
+		(282, '2024-11-29', 'TL', '2025-03-18'), -- kamyk  
+
+		(283, '2024-10-11', 'DRX', NULL), -- free1ng  
+		(284, '2024-10-11', 'DRX', NULL), -- HYUNMIN  
+
+		(285, '2023-03-09', 'GEN', '2023-09-08'), -- Sylvan  
+		(285, '2024-10-09', 'T1', '2025-10-08'), -- Sylvan  
+		(285, '2025-10-28', 'TS', NULL); -- Sylvan  
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(286, '2022-07-19', 'TLN', '2022-09-29'), -- PatMen  
+		(286, '2025-03-04', 'PRX', NULL), -- PatMen  
+
+		(287, '2024-10-31', 'BLG', NULL), -- rushia  
+		(288, '2023-09-21', 'BLG', '2024-01-16'), -- Levius  
+		(288, '2024-04-25', 'BLG', NULL), -- Levius  
+
+		(289, '2025-03-19', 'TL', '2025-07-11'), -- Serial  
+
+		(290, '2023-09-16', 'NIP', '2024-05-31'), -- SiuFatBB  
+		(290, '2024-05-31', 'WOL', NULL), -- SiuFatBB  
+		(291, '2024-11-25', 'WOL', '2025-09-28'), -- Juicy  
+		(292, '2023-08-30', 'NIP', '2024-01-17'), -- Spring  
+		(292, '2024-01-17', 'WOL', NULL), -- Spring  
+
+		(293, '2025-03-17', 'GEN', NULL), -- Ash  
+
+		(294, '2024-10-10', 'NRG', '2025-02-16'), -- Verno  
+		(294, '2025-03-20', 'MIBR', NULL), -- Verno  
+		(295, '2024-11-25', 'MIBR', '2025-10-10'), -- cortezia  
+		(295, '2025-11-01', 'SEN', NULL), -- cortezia  
+		(296, '2024-11-24', 'MIBR', NULL), -- xenom  
+		(297, '2023-10-15', 'MIBR', '2025-10-09'), -- artzin  
+
+		(298, '2024-03-14', 'XLG', NULL), -- happywei  
+		(299, '2023-09-06', 'DRG', '2023-10-08'), -- Rarga  
+		(299, '2023-12-21', 'XLG', NULL), -- Rarga  
+		(300, '2024-12-25', 'XLG', NULL), -- coconut  
+		(301, '2025-04-08', 'TE', '2025-06-02'), -- Midi  
+		(301, '2025-06-02', 'XLG', '2025-06-27'), -- Midi  
+		(302, '2024-12-25', 'XLG', NULL), -- Viva  
+
+		(303, '2024-10-10', 'XLG', NULL), -- Kushy  
+		(304, '2023-10-10', 'RRQ', NULL), -- Jemkin  
+		(305, '2025-03-21', 'RRQ', NULL), -- crazyguy  
+
+		(306, '2024-10-31', 'FNC', NULL); -- kaajak  
+
+INSERT INTO team_history (player_id, start_date, team_id, end_date)
+VALUES	(307, '2025-06-29', 'XLG', NULL), -- NoMan  
+
+		(308, '2025-04-16', 'GX', NULL), -- ara  
+		(309, '2024-11-26', 'GX', NULL), -- westside  
+		(310, '2025-04-16', 'GX', NULL), -- Flickless  
+		(311, '2022-04-11', 'TH', '2022-10-10'), -- grubinho  
+		(311, '2025-05-15', 'GX', NULL), -- grubinho  
+
+		(312, '2024-10-10', 'NRG', NULL), -- mada
+		(313, '2025-05-09', 'NRG', NULL), -- skuba  
+		(314, '2025-02-16', 'NRG', NULL), -- brawk  
+
+		(315, '2025-03-18', 'EDG', NULL), -- Jieni7  
+
+		(316, '2024-10-16', 'DRG', NULL), -- SpiritZ1  
+		(317, '2025-05-07', 'DRG', NULL), -- Akeman  
+
+		(318, '2025-05-15', 'T1', NULL); -- DH
 
 INSERT INTO maps (map_name)
 VALUES ('Bind'), ('Haven'), ('Split'), ('Ascent'), ('Icebox'), ('Breeze'), ('Fracture'), ('Pearl'), ('Lotus'), ('Sunset'), ('Abyss'), ('Corrode');
@@ -1221,7 +1985,7 @@ ORDER BY match_date;
 INSERT INTO agents (agent_name)
 VALUES	('Brimstone'), ('Viper'), ('Omen'), ('Killjoy'), ('Cypher'), ('Sova'), ('Sage'), ('Phoenix'), ('Jett'), ('Reyna'), ('Raze'), ('Breach'), ('Skye'), ('Yoru'), ('Astra'),
 		('KAY/O'), ('Chamber'), ('Neon'), ('Fade'), ('Harbor'), ('Gekko'), ('Deadlock'), ('Iso'), ('Clove'), ('Vyse'), ('Tejo'), ('Waylay');
-        
+
 SELECT * FROM agents;
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
@@ -6086,284 +6850,6 @@ VALUES	-- Valorant Champions 2021 added
 		(78, 'VC21_GF_05', '18', '0.75', '169', 'N'), -- nAts
 		(81, 'VC21_GF_05', '21', '0.56', '110', 'N'), -- sheydos
 		(80, 'VC21_GF_05', '20', '0.53', '125', 'N'); -- Redgar
-        
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Reykjavík 2022 added
-		-- FNATIC (FNC)
-        ('Enzo', 'Enzo Mestari', NULL, 'N'), -- 138
-        ('H1ber', 'Joona Parviainen', NULL, 'N'), -- 139
-        
-        -- DRX (DRX)
-        ('Zest', 'Kim Ki-seok', NULL, 'N'), -- 140
-        
-        -- ZETA DIVISION (ZETA)
-        ('Dep', 'Yuma Hashimoto', 'ZETA', 'Y'), -- 141
-        ('TENNN', 'Tenta Asai', NULL, 'N'), -- 142
-        ('SugarZ3ro', 'Shota Watanabe', 'ZETA', 'Y'), -- 143
-        
-        -- XERXIA Esports (XIA)
-        ('Surf', 'Thanachart Rungapajaratkul', NULL, 'N'), -- 144
-        
-        -- Ninjas In Pyjamas (NIP)
-        ('Jonn', 'Walney Reis', NULL, 'N'), -- 145
-        ('bezn1', 'Gabriel Luiz da Costa', NULL, 'N'), -- 146
-        ('cauanzin', 'Cauan Pereira', 'LOUD', 'Y'), -- 147
-        
-        -- G2 Esports (G2)
-        ('Meddo', 'Johan Renbjörk Lundborg', NULL, 'N'), -- 148
-        ('hoody', 'Aaro Peltokangas', NULL, 'N'), -- 149
-        
-        -- The Guard (TGRD)
-        ('valyn', 'Jacob Batio', 'G2', 'Y'), -- 150
-        ('Sayaplayer', 'Ha Jeong-woo', NULL, 'N'), -- 151
-        ('JonahP', 'Jonah Pulice', 'G2', 'Y'), -- 152
-        ('neT', 'Michael Bernet', NULL, 'N'), -- 153
-        ('trent', 'Trent Cairns', 'G2', 'Y'), -- 154
-        
-        -- Paper Rex (PRX)
-        ('Jinggg', 'Wang Jing Jie', 'PRX', 'Y'), -- 155
-        
-        -- LOUD (LOUD)
-        ('pANcada', 'Bryan Luna', 'LOUD', 'Y'), -- 156
-        ('Less', 'Felipe de Loyola Basso', 'VIT', 'Y'), -- 157
-        ('aspas', 'Erick Santos', 'MIBR', 'Y'); -- 158
-        
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(138, '2020-07-14', 'NIP', '2020-09-17'), -- Enzo
-		(138, '2022-03-31', 'FNC', '2022-05-09'), -- Enzo
-		(138, '2022-05-09', 'FNC', '2022-09-22'), -- Enzo
-		(138, '2023-11-04', 'TL', '2024-08-30'), -- Enzo
-		(139, '2022-04-01', 'FNC', '2022-04-27'), -- H1ber
-		(139, '2022-05-07', 'VIT', '2022-09-22'), -- H1ber
-
-		(140, '2020-06-07', 'VS', '2021-07-13'), -- Zest
-		(140, '2022-01-04', 'VS', '2022-01-07'), -- Zest
-		(140, '2022-01-07', 'DRX', '2023-12-12'), -- Zest
-
-		(141, '2021-12-01', 'ZETA', '2025-04-13'), -- Dep
-		(141, '2025-05-13', 'ZETA', NULL), -- Dep
-		(142, '2021-07-03', 'NTH', '2021-12-01'), -- TENNN
-		(142, '2021-12-01', 'ZETA', '2022-07-30'), -- TENNN
-		(142, '2022-09-01', 'ZETA', '2023-09-29'), -- TENNN
-		(143, '2021-02-06', 'NTH', '2021-12-01'), -- SugarZ3ro
-		(143, '2021-12-01', 'ZETA', NULL), -- SugarZ3ro
-
-		(144, '2022-01-17', 'XIA', '2023-03-31'), -- Surf
-		(144, '2024-01-19', 'TLN', '2024-11-16'), -- Surf
-
-		(145, '2022-01-16', 'NIP', '2022-09-21'), -- Jonn
-		(146, '2022-01-16', 'NIP', '2022-09-21'), -- bezn1
-		(147, '2022-01-16', 'NIP', '2022-09-21'), -- cauanzin
-		(147, '2022-11-10', 'LOUD', NULL), -- cauanzin
-
-		(148, '2020-08-12', 'FPX', '2020-12-08'), -- Meddo
-		(148, '2021-01-16', 'GIA', '2021-11-18'), -- Meddo
-		(148, '2021-12-23', 'G2', '2022-09-21'), -- Meddo
-		(149, '2021-01-16', 'GIA', '2021-11-18'), -- hoody
-		(149, '2021-12-23', 'G2', '2022-09-21'), -- hoody
-		(149, '2022-11-10', 'GIA', '2023-12-14'), -- hoody
-		(149, '2023-12-14', 'GX', '2024-09-06'), -- hoody
-
-		(150, '2021-11-05', 'TGRD', '2022-09-21'), -- valyn
-		(150, '2023-01-09', 'TGRD', '2023-09-01'), -- valyn
-		(150, '2023-09-22', 'G2', NULL), -- valyn
-		(151, '2020-10-14', 'T1', '2021-06-25'), -- Sayaplayer
-		(151, '2021-12-14', 'TGRD', '2022-09-21'), -- Sayaplayer
-		(151, '2022-10-22', 'T1', '2024-07-25'), -- Sayaplayer
-		(152, '2021-12-13', 'TGRD', '2022-09-21'), -- JonahP
-		(152, '2023-01-09', 'TGRD', '2023-09-01'), -- JonahP
-		(152, '2023-09-22', 'G2', NULL), -- JonahP
-		(153, '2021-11-05', 'TGRD', '2022-09-21'), -- neT
-		(153, '2023-01-09', 'TGRD', '2023-09-01'), -- neT
-		(153, '2023-09-22', 'G2', '2024-04-03'), -- neT
-		(153, '2024-12-19', 'C9', '2025-10-08'), -- neT
-		(154, '2022-01-17', 'TGRD', '2023-09-01'), -- trent
-		(154, '2023-09-22', 'G2', NULL), -- trent
-
-		(155, '2021-09-28', 'PRX', '2023-10-06'), -- Jinggg
-		(155, '2023-10-06', 'PRX', '2024-03-29'), -- Jinggg
-		(155, '2024-03-29', 'PRX', NULL), -- Jinggg
-
-		(156, '2022-02-03', 'LOUD', '2022-10-15'), -- pANcada
-		(156, '2022-10-15', 'SEN', '2024-02-09'), -- pANcada
-		(156, '2024-02-09', 'SEN', '2024-03-07'), -- pANcada
-		(156, '2024-06-12', 'LOUD', NULL), -- pANcada
-		(157, '2022-02-03', 'LOUD', '2024-10-16'), -- Less
-		(157, '2024-10-16', 'VIT', NULL), -- Less
-		(158, '2022-02-03', 'LOUD', '2023-09-11'), -- aspas
-		(158, '2023-10-11', 'LEV', '2024-11-27'), -- aspas
-		(158, '2024-11-27', 'MIBR', NULL); -- aspas
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Copenhagen 2022 added
-        -- Guild Esports (GLD)
-        ('Sayf', 'Saif Jibraeel', 'VIT', 'Y'), -- 159
-        ('Russ', 'Russel Mendes', NULL, 'N'), -- 160
-        ('Leo', 'Leo Jannesson', NULL, 'N'), -- 161
-        ('trexx', 'Nikita Cherednichenko', NULL, 'N'), -- 162
-        
-        -- FunPlus Phoenix (FPX)
-        ('Zyppan', 'Pontus Eek', NULL, 'N'), -- 163
-        ('ardiis', 'Ardis Svarenieks', NULL, 'N'), -- 164
-        ('ANGE1', 'Kyrylo Karasov', NULL, 'N'), -- 165
-        ('SEIDER', 'Mathias Seider', NULL, 'N'), -- 166
-        ('Shao', 'Andrey Kiprsky', 'NAVI', 'Y'), -- 167
-        
-        -- NORTHEPTION (NTH)
-        ('Derialy', 'Daichi Doi', NULL, 'N'), -- 168
-        ('JoXJo', 'Cho Byung-yeon', NULL, 'N'), -- 169
-        ('xnfri', 'Tomoki Mariya', NULL, 'N'), -- 170
-        ('BlackWiz', 'Kohei Mikami', NULL, 'N'), -- 171
-        ('Meteor', 'Kim Tae-oh', 'T1', 'Y'), -- 172
-        
-        -- XSET (XSET)
-        ('AYRIN', 'Jordan He', NULL, 'N'), -- 173
-        ('BcJ', 'Brendan Jensen', NULL, 'N'), -- 174
-        ('dephh', 'Rory Jackson', NULL, 'N'), -- 175
-        ('zekken', 'Zachary Patrone', NULL, 'N'), -- 176
-        ('Cryocells', 'Matthew Panganiban', '100T', 'Y'), -- 177
-        
-        -- FNATIC (FNC)
-        ('Alfajer', 'Emir Ali Beder', 'FNC', 'Y'), -- 178
-        
-        -- LEVIATÁN (LEV)
-        ('Melser', 'Marco Eliot Machuca Amaro', NULL, 'N'), -- 179
-        ('adverso', 'Benjamín Poblete', NULL, 'N'), -- 180
-        ('Tacolilla', 'Vicente Compagnon', NULL, 'N'), -- 181
-        ('kiNgg', 'Francisco Aravena', 'LEV', 'Y'), -- 182
-        ('Shyy', 'Fabian Usnayo', NULL, 'N'), -- 183
-        
-        -- FunPlus Phoenix (FPX)
-        ('SUYGETSU', 'Dmitry Ilyushin', 'KC', 'Y'); -- 184
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(159, '2020-09-17', 'NIP', '2020-12-17'), -- Sayf
-		(159, '2021-01-20', 'GLD', '2022-09-22'), -- Sayf
-		(159, '2022-11-11', 'TL', '2023-09-29'), -- Sayf
-		(159, '2023-09-29', 'VIT', '2025-06-16'), -- Sayf
-		(159, '2025-08-18', 'VIT', NULL), -- Sayf
-		(160, '2022-01-07', 'GLD', '2022-08-03'), -- Russ
-		(161, '2020-10-21', 'GLD', '2022-10-16'), -- Leo
-		(161, '2022-10-16', 'FNC', '2024-06-15'), -- Leo
-		(162, '2022-01-07', 'GLD', '2022-09-22'), -- trexx
-		(162, '2024-01-30', 'VIT', '2025-03-18'), -- trexx
-		(162, '2025-07-12', 'TL', '2025-10-24'), -- trexx
-
-		(163, '2020-04-18', 'NIP', '2020-06-04'), -- Zyppan
-		(163, '2020-08-12', 'FPX', '2022-11-07'), -- Zyppan
-		(163, '2022-11-08', 'NAVI', '2024-08-30'), -- Zyppan
-		(164, '2020-07-03', 'G2', '2021-06-02'), -- ardiis
-		(164, '2021-06-04', 'TH', '2021-07-18'), -- ardiis
-		(164, '2021-12-02', 'FPX', '2022-11-07'), -- ardiis
-		(164, '2022-11-11', 'NRG', '2023-10-11'), -- ardiis
-		(164, '2023-10-11', 'NAVI', '2024-09-03'), -- ardiis
-		(165, '2020-08-12', 'FPX', '2022-11-07'), -- ANGE1
-		(165, '2022-11-08', 'NAVI', '2025-09-05'), -- ANGE1
-		(166, '2022-07-09', 'FPX', '2022-07-24'), -- SEIDER
-		(167, '2020-08-12', 'FPX', '2022-11-07'), -- Shao
-		(167, '2022-11-08', 'NAVI', NULL), -- Shao
-
-		(168, '2022-04-16', 'NTH', '2023-09-12'), -- Derialy
-		(169, '2022-02-08', 'NTH', '2022-10-13'), -- JoXJo
-		(170, '2022-02-08', 'NTH', '2022-10-24'), -- xnfri
-		(171, '2022-02-08', 'NTH', '2023-07-25'), -- BlackWiz
-		(172, '2022-02-08', 'NTH', '2022-09-28'), -- Meteor
-		(172, '2022-10-21', 'GEN', '2024-10-07'), -- Meteor
-		(172, '2024-10-12', 'T1', NULL), -- Meteor
-
-		(173, '2020-10-26', 'XSET', '2022-09-22'), -- AYRIN
-		(174, '2021-01-14', 'XSET', '2022-09-22'), -- BcJ
-		(174, '2022-11-11', 'EG', '2023-09-06'), -- BcJ
-		(175, '2021-06-14', 'XSET', '2022-09-22'), -- dephh
-		(175, '2022-10-18', 'SEN', '2023-05-12'), -- dephh
-		(176, '2021-06-26', 'XSET', '2022-09-22'), -- zekken
-		(176, '2022-10-05', 'SEN', '2025-11-01'), -- zekken
-		(177, '2021-12-31', 'XSET', '2022-09-24'), -- Cryocells
-		(177, '2022-09-29', '100T', '2025-09-15'), -- Cryocells
-		(177, '2025-11-05', '100T', NULL), -- Cryocells
-		(178, '2022-05-09', 'FNC', NULL), -- Alfajer
-
-		(179, '2021-11-18', 'LEV', '2022-09-27'), -- Melser
-		(179, '2022-10-21', 'KRU', '2025-09-06'), -- Melser
-		(180, '2021-11-18', 'LEV', '2022-09-27'), -- adverso
-		(180, '2024-11-06', 'KRU', '2025-07-11'), -- adverso
-		(181, '2021-11-18', 'LEV', '2023-09-11'), -- Tacolilla
-		(181, '2023-11-03', 'KRU', '2023-11-12'), -- Tacolilla
-		(182, '2021-11-18', 'LEV', NULL), -- kiNgg
-		(183, '2022-06-02', 'LEV', '2023-10-09'), -- Shyy
-		(183, '2023-10-13', 'KRU', '2025-09-20'), -- Shyy
-
-		(184, '2021-10-09', 'FPX', '2022-11-07'), -- SUYGETSU
-		(184, '2022-11-08', 'NAVI', '2024-09-04'), -- SUYGETSU
-		(184, '2024-11-09', 'KC', NULL); -- SUYGETSU
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Valorant Champions 2022 added
-		-- ZETA DIVISION (ZETA)
-		('Xdll', 'Yuto Mizomori', 'ZETA', 'Y'), -- 185
-        
-        -- 100 Thieves (100T)
-        ('stellar', 'Brenden McGrath', NULL, 'N'), -- 186
-        ('Will', 'William Cheng', NULL, 'N'), -- 187
-        ('Derrek', 'Derrek Ha', NULL, 'N'), -- 188
-        ('bang', 'Sean Bezerra', NULL, 'N'), -- 189
-        
-        -- Team Liquid (TL)
-        ('dimasick', 'Dmitriy Matvienko', NULL, 'N'), -- 190
-        
-        -- FURIA (FUR)
-        ('dgzin', 'Douglas Silva', NULL, 'N'), -- 191
-        
-        -- EDward Gaming (EDG)
-        ('nobody', 'Wang Senxu', 'EDG', 'Y'), -- 192
-        ('Life', 'Qu Donghao', 'FPX', 'Y'), -- 193
-        ('ZmjjKK', 'Zheng Yongkang', 'EDG', 'Y'), -- 194
-        ('Haodong', 'Guo Haodong', NULL, 'N'), -- 195
-        ('Smoggy', 'Zhang Zhao', 'EDG', 'Y'), -- 196
-        ('CHICHOO', 'Wan Shunzhi', 'EDG', 'Y'), -- 197
-        
-        -- BOOM Esports (BME)
-        ('blaZek1ng', 'Gary Dastin', NULL, 'N'), -- 198
-        ('Famouz', 'Fikri Zaki Hamdani', 'BME', 'Y'), -- 199
-        ('xffero', 'David Monangin', 'RRQ', 'Y'), -- 200
-        ('Berserx', 'Rizkie Adla Kusuma', 'BME', 'Y'), -- 201
-        ('fl1pzjder', 'Saibani Rahmad', NULL, 'N'); -- 202
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(185, '2022-07-30', 'ZETA', '2022-09-23'), -- Xdll
-		(185, '2024-10-16', 'ZETA', NULL), -- Xdll
-
-		(186, '2022-04-14', '100T', '2023-09-12'), -- stellar
-		(187, '2022-04-14', '100T', '2022-09-29'), -- Will
-		(188, '2022-04-14', '100T', '2023-09-12'), -- Derrek
-		(188, '2024-01-26', 'EG', '2025-10-06'), -- Derrek
-		(189, '2022-02-21', '100T', '2022-04-14'), -- bang
-		(189, '2022-04-14', '100T', '2024-10-03'), -- bang
-		(189, '2024-10-07', 'SEN', '2025-10-22'), -- bang
-
-		(190, '2021-01-04', 'FPX', '2021-08-26'), -- dimasick
-		(190, '2022-08-05', 'TL', '2023-09-12'), -- dimasick
-
-		(191, '2022-07-22', 'FUR', '2023-08-28'), -- dgzin
-		(191, '2024-11-16', 'LOUD', '2025-05-17'), -- dgzin
-
-		(192, '2021-09-07', 'EDG', NULL), -- nobody
-		(193, '2020-11-01', 'EDG', '2022-11-04'), -- Life
-		(193, '2022-11-04', 'ASE', '2024-01-13'), -- Life
-		(193, '2024-01-13', 'FPX', NULL), -- Life
-		(194, '2021-09-09', 'EDG', NULL), -- ZmjjKK
-		(195, '2020-08-05', 'EDG', '2024-10-19'), -- Haodong
-		(196, '2022-07-16', 'EDG', NULL), -- Smoggy
-		(197, '2021-05-01', 'EDG', NULL), -- CHICHOO
-
-		(198, '2020-07-15', 'BME', '2023-08-01'), -- blaZek1ng
-		(199, '2022-07-19', 'BME', '2022-09-20'), -- Famouz
-		(199, '2022-10-27', 'BME', NULL), -- Famouz
-		(200, '2021-10-06', 'BME', '2022-09-23'), -- xffero
-		(200, '2022-10-09', 'RRQ', NULL), -- xffero
-		(201, '2021-10-06', 'BME', NULL), -- BerserX
-		(202, '2021-06-21', 'BME', '2022-09-22'), -- fl1pzjder
-		(202, '2022-10-15', 'RRQ', '2024-05-03'); -- fl1pzjder
 
 INSERT INTO player_stats (player_id, match_id, headshot_pct, kd_ratio, avg_combat_score, mvps)
 VALUES	-- Masters Reykjavik 2022 added
@@ -9331,149 +9817,6 @@ VALUES	-- Valorant Champions 2022 added
 		(60, 'VC22_GF_04', '44', '0.92', '164', 'N'), -- yay
 		(56, 'VC22_GF_04', '16', '0.40', '113', 'N'), -- crashies
 		(59, 'VC22_GF_04', '15', '0.29', '109', 'N'); -- FiNESSE
-        
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Tokyo 2023
-		-- FUT Esports (FUT)
-		('AtaKaptan', 'Ata Tan', 'FUT', 'Y'), -- 203
-        ('MrFaliN', 'Furkan Yeğen', 'FUT', 'Y'), -- 204
-        ('MOJJ', 'Buğra Kiraz', NULL, 'N'), -- 205
-        ('qRaxs', 'Doğukan Balaban', 'FUT', 'Y'), -- 206
-        ('qw1', 'Konuralp Şahin', NULL, 'N'), -- 207
-        
-		-- Evil Geniuses (EG)
- 		('C0M', 'Corbin Lee', NULL, 'N'), -- 208
-        ('jawgemo', 'Alexander Mor', 'G2', 'Y'), -- 209
-        ('Demon1', 'Max Mazanov', 'DRG', 'N'), -- 210
-        ('Boostio', 'Kelden Pupello', NULL, 'N'), -- 211            
- 
- 		-- DRX
-        ('Foxy9', 'Jung Jae-sung', NULL, 'N'), -- 212      
-        
-		-- Attacking Soul Esports (ASE)
-        ('YHchen', 'Chen Yuhan', NULL, 'N'), -- 213     
-        ('monk', 'Wang Haoyu', NULL, 'N'), -- 214     
-        ('zjc', 'Zhang Juncheng', 'EDG', 'Y'), -- 215     
-        ('bunt', 'Jiang He', NULL, 'N'), -- 216 
-        
-		-- T1        
-        ('carpe', 'Lee Jae-hyeok', 'T1', 'Y'), -- 217    
-        ('ban', 'Joseph Seungmin Oh', NULL, 'N'), -- 218   
-        
-		-- NRG        
-        ('s0m', 'Sam Oh', NULL, 'N'), -- 219 
-        
-        -- PRX (Paper Rex)   
-        ('cgrs', 'Patiphan Porsi', NULL, 'N'), -- 220         
-        
-        -- LOUD
-        ('tuyz', 'Arthur Andrade', NULL, 'N'); -- 221
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(203, '2022-10-25', 'FUT', '2025-07-14'), -- AtaKaptan
-		(203, '2025-10-05', 'FUT', NULL), -- AtaKaptan
-		(204, '2022-01-06', 'FUT', NULL), -- MrFaliN
-		(205, '2020-10-12', 'FUT', '2023-09-11'), -- MOJJ
-		(205, '2023-11-19', 'SUP', '2024-04-21'), -- MOJJ
-		(206, '2021-02-21', 'FUT', NULL), -- qRaxs
-		(207, '2021-09-24', 'FUT', '2023-09-20'), -- qw1
-
-		(208, '2022-04-21', 'EG', '2024-01-08'), -- C0M
-		(208, '2024-01-09', 'LEV', '2025-09-04'), -- C0M
-		(209, '2022-01-27', 'EG', '2024-10-04'), -- jawgemo
-		(209, '2024-10-07', 'G2', NULL), -- jawgemo
-		(210, '2023-01-19', 'EG', '2023-12-23'), -- Demon1
-		(210, '2023-12-23', 'NRG', '2024-05-25'), -- Demon1
-		(210, '2024-05-25', 'NRG', '2024-10-09'), -- Demon1
-		(210, '2024-10-11', 'LEV', '2025-05-02'), -- Demon1
-		(210, '2025-09-05', 'DRG', NULL), -- Demon1
-		(211, '2021-09-27', 'EG', '2024-01-08'), -- Boostio
-		(211, '2024-01-08', '100T', '2025-07-19'), -- Boostio
-
-   		(212, '2022-10-13', 'DRX', '2024-10-07'), -- Foxy9
-		(212, '2024-10-24', 'GEN', '2025-10-29'), -- Foxy9
-
-  		(213, '2022-02-21', 'ASE', '2024-03-27'), -- YHchen
-		(214, '2021-06-03', 'ASE', '2024-01-17'), -- monk
-		(215, '2021-08-10', 'ASE', '2024-01-14'), -- zjc
-		(215, '2025-06-24', 'EDG', NULL), -- zjc
-		(216, '2022-03-25', 'ASE', '2024-01-17'), -- bunt
-
-		(217, '2022-11-11', 'T1', NULL), -- carpe
-		(218, '2022-08-10', 'T1', '2023-09-12'), -- ban
-		(218, '2023-11-17', 'TLN', '2025-02-21'), -- ban
-
-		(219, '2020-10-07', 'NRG', '2023-09-14'), -- s0m
-		(219, '2024-05-30', 'NRG', '2025-10-22'), -- s0m
-
-		(220, '2022-10-22', 'PRX', '2023-09-11'), -- cgrs
-
-		(221, '2022-11-10', 'LOUD', '2025-05-15'), -- tuyz
-		(221, '2025-05-16', 'FUR', '2025-05-25'), -- tuyz
-		(221, '2025-07-14', 'FUR', '2025-09-27'); -- tuyz
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Valorant Champion 2023
-        -- FPX
-		('AAAAY', 'Zhang Yang', 'FPX', 'Y'), -- 222
-        ('Lysoar', 'Liang Youhao', NULL, 'N'), -- 223
-        ('Yuicaw', 'Huang Yung-chieh', NULL, 'N'), -- 224
-        ('nizhaoTZH', 'Tang Zehao', NULL, 'N'), -- 225
-        ('BerLIN', 'Zhang Bolin', 'FPX', 'Y'), -- 226       
-       
-      -- BLG
-		('Biank', 'Zhong Jianfe', 'TE', 'Y'), -- 227
-        ('whzy', 'Wang Haozhe', 'BLG', 'Y'), -- 228
-        ('rin', 'Li Le Wei', NULL, 'N'), -- 229
-        ('yosemite', 'Wang Lei', 'FPX', 'Y'), -- 230
-        ('Knight', 'Liu Yuxiang', 'BLG', 'Y'), -- 231      
-       
-       -- PRX
-        ('something', 'Ilya Petrov', 'PRX', 'Y'), -- 232    
-        
-		-- KRU
-        ('DaveeyS', 'Santiago Galvis Ruiz', NULL, 'N'), -- 233   
-
-		-- GX
-        ('Fit1nho', 'Adolfo Gallego', NULL, 'N'), -- 234    
-		('rhyme', ' Emir Muminovic', NULL, 'N'), -- 235    
-        ('Cloud', 'Kirill Nehozhin', 'GX', 'Y'); -- 236
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(222, '2023-01-09', 'FPX', NULL), -- AAAAY
-		(223, '2023-03-21', 'FPX', '2024-10-15'), -- Lysoar  
-		(223, '2024-10-15', 'WOL', '2025-10-20'), -- Lysoar  
-		(224, '2023-01-09', 'FPX', '2023-09-19'), -- Yuicaw  
-		(224, '2023-09-19', 'ASE', '2024-01-17'), -- Yuicaw  
-		(224, '2024-01-17', 'WOL', '2025-09-29'), -- Yuicaw  
-		(225, '2023-01-09', 'FPX', '2024-01-12'), -- nizhaoTZH  
-		(225, '2024-01-12', 'DRG', '2025-01-02'), -- nizhaoTZH  
-		(226, '2023-01-09', 'FPX', '2025-03-04'), -- BerLIN  
-		(226, '2025-04-28', 'FPX', NULL), -- BerLIN  
-
-		(227, '2023-04-11', 'BLG', '2024-06-11'), -- Biank  
-		(227, '2024-06-11', 'TE', NULL), -- Biank  
-		(228, '2023-02-20', 'BLG', NULL), -- whzy  
-		(229, '2023-02-20', 'BLG', '2024-01-16'), -- rin  
-		(230, '2023-04-25', 'BLG', '2024-10-30'), -- yosemite  
-		(230, '2024-10-30', 'FPX', NULL), -- yosemite  
-		(231, '2023-04-25', 'BLG', NULL), -- Knight  
-
-		(232, '2023-03-22', 'PRX', NULL), -- something  
-
-		(233, '2022-10-21', 'KRU', '2023-09-04'), -- DaveeyS  
-
-		(234, '2020-06-26', 'GIA', '2021-01-16'), -- Fit1nho  
-		(234, '2021-02-26', 'GIA', '2023-12-14'), -- Fit1nho  
-		(234, '2023-12-14', 'GX', '2024-09-06'), -- Fit1nho  
-		(235, '2020-04-12', 'NIP', '2020-06-25'), -- rhyme  
-		(235, '2020-06-25', 'NIP', '2021-11-02'), -- rhyme  
-		(235, '2021-12-21', 'GEN', '2022-07-22'), -- rhyme  
-		(235, '2022-08-30', 'FPX', '2022-09-19'), -- rhyme  
-		(235, '2022-11-10', 'GIA', '2023-09-06'), -- rhyme  
-		(236, '2021-06-18', 'NAVI', '2022-09-23'), -- Cloud  
-		(236, '2022-11-10', 'GIA', '2023-12-14'), -- Cloud  
-		(236, '2023-12-14', 'GX', NULL); -- Cloud  
 
 INSERT INTO player_stats (player_id, match_id, headshot_pct, kd_ratio, avg_combat_score, mvps)
 VALUES	-- Masters Tokyo 2023 added
@@ -11522,196 +11865,6 @@ VALUES	-- Valorant Champions 2023 added
         (211, 'VC23_GF_04', '36', '1.00', '198', 'N'), -- Boostio
         (55, 'VC23_GF_04', '29', '0.76', '180', 'N'), -- Ethan
         (208, 'VC23_GF_04', '30', '0.69', '118', 'N'); -- C0M
-        
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Madrid 2024 
-        -- KC
- 		('N4RRATE', 'Marshall Massey', 'SEN', 'Y'), -- 237
-        ('marteen', 'Martin Pátek', 'KC', 'Y'), -- 238
-        ('sh1n', 'Ryad Ensaad', NULL, 'N'), -- 239
-        ('tomaszy', 'Tomás Machado', NULL, 'N'), -- 240       
-        
-		-- FPX
-        ('Autumn', 'Kale Dunne', 'FPX', 'Y'), -- 241
-        
-        -- GEN
-        ('t3xture', 'Kim Na-ra', 'GEN', 'Y'), -- 242
-        ('Karon', 'Kim Won-tae', 'GEN', 'Y'), -- 243               
-			
-        -- PRX
-        ('Monyet', 'Cahya Nugraha', 'RRQ', 'Y'), -- 244               
-        
-        -- SEN
-        ('johnqt', 'Mohamed Amine Ouarid', 'SEN', 'Y'), -- 245        
-        
-        -- TH
-        ('MiniBoo', 'Dominykas Lukaševičius', NULL, 'N'), -- 246      
-        ('Boo', 'Ričardas Lukaševičius', 'TH', 'Y'), -- 247      
-        ('benjyfishy', 'Benjamin David Fish', 'TH', 'Y'), -- 248      
-        ('RieNs', 'Enes Ecirli', 'TH', 'Y'), -- 249      
-        ('paTiTek', 'Patryk Fabrowski', NULL, 'N'); -- 250
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(237, '2023-12-12', 'KC', '2024-10-07'), -- N4RRATE  
-		(237, '2024-10-07', 'SEN', NULL), -- N4RRATE  
-		(238, '2023-12-12', 'KC', NULL), -- marteen  
-		(239, '2022-05-05', 'KC', '2022-09-30'), -- sh1n  
-		(239, '2022-11-11', 'KC', '2024-09-11'), -- sh1n  
-		(240, '2023-12-12', 'KC', '2024-09-10'), -- tomaszy  
-		(240, '2024-11-26', 'GX', '2025-04-16'), -- tomaszy  
-
- 		(241, '2023-09-19', 'FPX', NULL), -- Autumn  
-
-		(242, '2023-09-26', 'GEN', '2025-10-21'), -- t3xture  
-		(242, '2025-10-25', 'GEN', NULL), -- t3xture  
-		(243, '2023-11-23', 'GEN', '2025-10-21'), -- Karon  
-		(243, '2025-10-24', 'GEN', NULL), -- Karon  
-
-		(244, '2023-09-16', 'PRX', '2024-03-29'), -- Monyet  
-		(244, '2024-03-29', 'PRX', '2024-05-20'), -- Monyet  
-		(244, '2024-05-20', 'RRQ', NULL), -- Monyet  
-
-		(245, '2023-09-13', 'SEN', NULL), -- johnqt  
-
-   		(246, '2023-10-10', 'TH', '2025-10-09'), -- MiniBoo  
-		(247, '2021-01-16', 'GIA', '2021-07-05'), -- Boo  
-		(247, '2022-11-10', 'TH', NULL), -- Boo  
-		(248, '2023-07-12', 'TH', NULL), -- benjyfishy  
-		(249, '2023-10-10', 'TH', NULL), -- RieNs  
-		(250, '2020-06-24', 'G2', '2021-06-02'), -- paTiTek  
-		(250, '2021-06-04', 'TH', '2021-09-24'), -- paTiTek  
-		(250, '2023-12-15', 'TH', '2024-04-23'), -- paTiTek  
-		(250, '2024-05-17', 'TH', '2024-06-09'), -- paTiTek  
-		(250, '2024-11-29', 'TL', '2025-10-17'); -- paTiTek  
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Shanghai 2024 
-		-- G2 
-        ('icy', 'Kale Dunne', 'FPX', 'Y'), -- 251
-        
-        -- T1
- 		('xccurate', 'Kevin Susanto', NULL, 'N'), -- 252
-        ('iZu', 'Ham Woo-ju', 'T1', 'Y'), -- 253
-        ('Rossy', 'Daniel Abedrabbo', NULL, 'N'), -- 254     
-   
-        -- FUT
-        ('yetujey', 'Eray Budak', 'FUT', 'Y'), -- 255
-        
-		-- LEV
-        ('tex', 'Ian Botsch', NULL, 'N'), -- 256             
-			
-        -- TH
-        ('Wo0t', 'Mert Alkan', 'TH', 'Y'), -- 257               
-        
-        -- DRG
-        ('TvirusLuke', 'Chen Cheng-ching', NULL, 'N'), -- 258
-        ('vo0kashu', 'Ilya Ushakov', 'DRG', 'Y'), -- 259     
-        ('Shion7', 'Zhang Haozhe', NULL, 'N'), -- 260   
-        ('Nicc', 'Shao Yi-qun', 'DRG', 'Y'), -- 261  
-        
-        -- 100T       
-        ('eeiu', 'Daniel Vucenovic', NULL, 'N'); -- 262
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(251, '2023-06-16', 'EG', '2023-09-06'), -- icy  
-		(251, '2024-04-04', 'G2', '2024-09-26'), -- icy  
-		(251, '2024-12-20', 'EG', '2025-10-22'), -- icy  
-
-		(252, '2023-09-12', 'T1', '2025-01-08'), -- xccurate  
-		(253, '2023-09-12', 'T1', NULL), -- iZu  
-		(254, '2023-11-10', 'T1', '2024-10-08'), -- Rossy  
-		(254, '2024-10-08', 'C9', '2024-12-02'), -- Rossy  
-		(254, '2025-03-04', 'LEV', '2025-05-02'), -- Rossy  
-
- 		(255, '2023-10-12', 'FUT', NULL), -- yetujey  
-
-		(256, '2021-03-24', 'NRG', '2022-09-30'), -- tex  
-		(256, '2023-01-09', 'TGRD', '2023-09-01'), -- tex  
-		(256, '2023-10-12', 'LEV', '2025-09-04'), -- tex  
-
-		(257, '2023-10-10', 'TH', NULL), -- Wo0t  
-
-		(258, '2023-03-22', 'DRG', '2025-03-09'), -- TvirusLuke  
-		(259, '2023-09-06', 'DRG', NULL), -- vo0kashu  
-		(260, '2023-11-05', 'DRG', '2023-11-26'), -- Shion7  
-		(260, '2024-01-18', 'DRG', '2024-11-27'), -- Shion7  
-		(261, '2023-03-22', 'DRG', NULL), -- Nicc  
-
-		(262, '2020-10-14', 'NRG', '2022-09-30'), -- eeiu  
-		(262, '2023-11-01', '100T', '2025-10-31'); -- eeiu  
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Valorant Champions 2024
-        -- DRX
-        ('Flashback', 'Cho Min-hyuk', 'DRX', 'Y'), -- 263
-        ('BeYN', 'Kang Ha-bin', 'DRX', 'Y'), -- 264
-        
-        -- KRU       
-        ('mta', 'Nicolás González', NULL, 'N'), -- 265
-        
-        -- FNC       
-        ('hiro', 'Emirhan Kat', 'NAVI', 'Y'), -- 266   
-        
-        -- BLG
-        ('nephh', 'Marcus Tan', 'BLG', 'Y'), -- 267
-        ('Flex1n', 'Lo Rui', 'BLG', 'Y'), -- 268
-
-        -- TLN
- 		('primmie', 'Papaphat Sriprapha', 'TLN', 'Y'), -- 269
-        ('Governor', 'Peter No', NULL, 'N'), -- 270
-        ('JitBoyS', 'Jittana Nokngam', 'TLN', 'Y'), -- 271    
-        
-        -- VIT
- 		('runneR', 'Emil Trajkovski', NULL, 'N'), -- 272
-        ('ceNder', 'Jokūbas Labutis', NULL, 'Y'), -- 273
-        ('Kicks', 'Kimmie Laasner', 'VIT', 'Y'), -- 274    
-        
-        -- TE
-        ('LuoK1ng', 'Zhang Zhanpeng', 'TE', 'Y'), -- 275
-        ('Kai', 'Lu Zhinan', 'TE', 'Y'), -- 276
-        ('FengF ', 'Song Xuefeng', 'TE', 'Y'), -- 277   
-        ('heybay', 'Ho Shun Hei', 'TE', 'Y'), -- 278  
-        
-        -- EDG       
-        ('S1Mon', 'Hsien Meng-Hsun', NULL, 'N'); -- 279   
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(263, '2023-12-12', 'DRX', '2024-04-04'), -- Flashback  
-		(263, '2024-05-30', 'DRX', '2025-04-23'), -- Flashback  
-		(263, '2025-07-07', 'DRX', NULL), -- Flashback  
-		(264, '2022-04-01', 'F4Q', '2022-10-20'), -- BeYN  
-		(264, '2023-03-27', 'DRX', '2024-10-07'), -- BeYN  
-		(264, '2025-01-05', 'DRX', NULL), -- BeYN  
-
-		(265, '2023-10-13', 'KRU', '2024-03-25'), -- mta  
-		(265, '2024-07-01', 'KRU', '2025-01-17'), -- mta  
-
-		(266, '2023-11-24', 'SUP', '2024-06-15'), -- hiro  
-		(266, '2024-06-15', 'FNC', '2024-09-03'), -- hiro  
-		(266, '2024-12-03', 'NAVI', NULL), -- hiro  
-
-		(267, '2023-02-02', 'X10', '2023-03-14'), -- nephh  
-		(267, '2024-06-05', 'BLG', NULL), -- nephh  
-		(268, '2023-06-23', 'TE', '2024-03-27'), -- Flex1n  
-		(268, '2024-06-11', 'BLG', '2024-10-08'), -- Flex1n  
-		(268, '2024-11-28', 'DRG', NULL), -- Flex1n  
-
-		(269, '2024-07-10', 'TLN', NULL), -- primmie  
-		(270, '2023-11-17', 'TLN', '2025-02-21'), -- Governor  
-		(271, '2022-10-25', 'TLN', NULL), -- JitBoyS  
-
-		(272, '2023-09-16', 'VIT', '2024-10-07'), -- runneR  
-		(272, '2024-11-26', 'GX', '2025-04-16'), -- runneR  
-		(273, '2021-02-04', 'VIT', '2024-11-01'), -- ceNder  
-		(274, '2023-09-26', 'VIT', '2025-11-06'), -- Kicks  
-
-		(275, '2024-03-27', 'TE', NULL), -- LuoK1ng  
-		(276, '2023-03-22', 'BLG', '2023-09-06'), -- Kai  
-		(276, '2023-09-06', 'TE', NULL), -- Kai  
-		(277, '2023-06-23', 'TE', NULL), -- FengF  
-		(278, '2023-06-23', 'TE', NULL), -- heybay  
-
-		(279, '2024-06-25', 'EDG', '2025-04-18'); -- S1Mon  
 
 INSERT INTO player_stats (player_id, match_id, headshot_pct, kd_ratio, avg_combat_score, mvps)
 VALUES	-- Masters Madrid 2024 added
@@ -14530,159 +14683,6 @@ VALUES	-- Valorant Champions 2024 added
         (249, 'VC24_GF_05', '37', '0.76', '173', 'N'), -- 249
         (246, 'VC24_GF_05', '21', '0.53', '143', 'N'), -- 246
         (247, 'VC24_GF_05', '22', '0.56', '131', 'N'); -- 247
-        
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Bangkok 2025
-		-- TL
-        ('kamo', 'Kamil Frąckowiak', 'TL', 'Y'), -- 280
-        ('keiko', 'Georgio Sanassy', 'TL', 'Y'), -- 281
-        ('kamyk', 'Maks Rychlewski', NULL, 'N'), -- 282   
-        
-		-- DRX
-        ('free1ng', 'No Ha-jun', 'DRX', 'Y'), -- 283
-        ('HYUNMIN', 'Song Hyun-min', 'DRX', 'Y'), -- 284
-        
- 		-- T1
-        ('Sylvan', 'Go Young-sup', 'TS', 'Y'); -- 285
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(280, '2024-10-15', 'TL', NULL), -- kamo  
-		(281, '2023-11-04', 'TL', NULL), -- keiko  
-		(282, '2023-01-13', 'FNC', '2023-09-14'), -- kamyk  
-		(282, '2024-11-29', 'TL', '2025-03-18'), -- kamyk  
-
-		(283, '2024-10-11', 'DRX', NULL), -- free1ng  
-		(284, '2024-10-11', 'DRX', NULL), -- HYUNMIN  
-
-		(285, '2023-03-09', 'GEN', '2023-09-08'), -- Sylvan  
-		(285, '2024-10-09', 'T1', '2025-10-08'), -- Sylvan  
-		(285, '2025-10-28', 'TS', NULL); -- Sylvan  
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Masters Toronto 2025
- 		-- PRX
-        ('PatMen', 'Patrick Mendoza', 'PRX', 'Y'), -- 286
-        
-		-- BLG
-        ('rushia', 'Wang Xiaojie', 'BLG', 'Y'), -- 287
-        ('Levius', 'Lu Yinzhong', 'BLG', 'Y'), -- 288       
-        
-		-- TL
-        ('Serial', 'Maikls Zdanovs', NULL, 'N'), -- 289
-        
-		-- WOL
-        ('SiuFatBB', 'Pong Gaa Hei', 'WOL', 'Y'), -- 290        
-        ('Juicy', 'Tyler James Aeria', NULL, 'N'), -- 291
-        ('Spring', 'Liu Jiunting', 'WOL', 'Y'), -- 292   
-
-		-- GEN
-        ('Ash', 'Ha Hyun-cheol', 'GEN', 'Y'), -- 293
-        
-		-- MIBR
-        ('Verno', 'Andrew Maust', 'MIBR', 'Y'), -- 294
-        ('cortezia', 'Gabriel Cortez', 'SEN', 'Y'), -- 295
-        ('xenom', 'Eduardo Soeiro', 'MIBR', 'Y'), -- 296      
-        ('artzin', 'Arthur Araujo', NULL, 'N'), -- 297        
-  
- 		-- XLG
-        ('happywei', 'Deng Minwei', 'XLG', 'Y'), -- 298
-        ('Rarga', 'Arthur Churyumov', 'XLG', 'Y'), -- 299
-        ('coconut', 'Colin Patrick Chung', 'XLG', 'Y'), -- 300      
-        ('Midi', 'Zhang Jiajun', NULL, 'N'), -- 301      
-        ('Viva', 'Lifan Ran', 'XLG', 'Y'), -- 302
-        
-		-- RRQ
-        ('Kushy', 'Bryan Carlos Setiawan', 'RRQ', 'Y'), -- 303
-        ('Jemkin', 'Maksim Batorov', 'RRQ', 'Y'), -- 304
-        ('crazyguy', 'Ngô Công Anh', 'RRQ', 'Y'), -- 305
-        
-		-- FNC
-        ('kaajak', 'Kajetan Haremski', 'FNC', 'Y'); -- 306     
-        
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(286, '2022-07-19', 'TLN', '2022-09-29'), -- PatMen  
-		(286, '2025-03-04', 'PRX', NULL), -- PatMen  
-
-		(287, '2024-10-31', 'BLG', NULL), -- rushia  
-		(288, '2023-09-21', 'BLG', '2024-01-16'), -- Levius  
-		(288, '2024-04-25', 'BLG', NULL), -- Levius  
-
-		(289, '2025-03-19', 'TL', '2025-07-11'), -- Serial  
-
-		(290, '2023-09-16', 'NIP', '2024-05-31'), -- SiuFatBB  
-		(290, '2024-05-31', 'WOL', NULL), -- SiuFatBB  
-		(291, '2024-11-25', 'WOL', '2025-09-28'), -- Juicy  
-		(292, '2023-08-30', 'NIP', '2024-01-17'), -- Spring  
-		(292, '2024-01-17', 'WOL', NULL), -- Spring  
-
-		(293, '2025-03-17', 'GEN', NULL), -- Ash  
-
-		(294, '2024-10-10', 'NRG', '2025-02-16'), -- Verno  
-		(294, '2025-03-20', 'MIBR', NULL), -- Verno  
-		(295, '2024-11-25', 'MIBR', '2025-10-10'), -- cortezia  
-		(295, '2025-11-01', 'SEN', NULL), -- cortezia  
-		(296, '2024-11-24', 'MIBR', NULL), -- xenom  
-		(297, '2023-10-15', 'MIBR', '2025-10-09'), -- artzin  
-
-		(298, '2024-03-14', 'XLG', NULL), -- happywei  
-		(299, '2023-09-06', 'DRG', '2023-10-08'), -- Rarga  
-		(299, '2023-12-21', 'XLG', NULL), -- Rarga  
-		(300, '2024-12-25', 'XLG', NULL), -- coconut  
-		(301, '2025-04-08', 'TE', '2025-06-02'), -- Midi  
-		(301, '2025-06-02', 'XLG', '2025-06-27'), -- Midi  
-		(302, '2024-12-25', 'XLG', NULL), -- Viva  
-
-		(303, '2024-10-10', 'XLG', NULL), -- Kushy  
-		(304, '2023-10-10', 'RRQ', NULL), -- Jemkin  
-		(305, '2025-03-21', 'RRQ', NULL), -- crazyguy  
-
-		(306, '2024-10-31', 'FNC', NULL); -- kaajak  
-
-INSERT INTO player (player_ign, player_name, team_id, active_status)
-VALUES	-- Valorant Champions 2025
-		-- XLG
-         ('NoMan', 'James Man', 'XLG', 'Y'), -- 307
-         
- 		-- GX
-        ('ara', 'Hanceriuc Eduard-George', 'GX', 'Y'), -- 308
-        ('westside', 'Miłosz Duda', 'GX', 'Y'), -- 309
-        ('Flickless', 'Karel Maeckelbergh', 'GX', 'Y'), -- 310      
-        ('grubinho', 'Grzegorz Ryczko', 'GX', 'Y'), -- 311  
-        
- 		-- NRG
-        ('mada', 'Adam Pampuch', 'NRG', 'Y'), -- 312
-        ('skuba', 'Logan Jenkins', 'NRG', 'Y'), -- 313
-        ('brawk', 'Brock Somerhalder', 'NRG', 'Y'), -- 314     
-			
- 		-- EDG
-        ('Jieni7', 'Zhang Juntai', 'EDG', 'Y'), -- 315    
-        
- 		-- DRX
-        ('SpiritZ1', 'Lin Dingyu', 'DRG', 'Y'), -- 316
-        ('Akeman', 'Zhang Haoran', 'DRG', 'Y'), -- 317
-        
- 		-- T1
-        ('DH', 'Kang Dong-ho', 'T1', 'Y'); -- 318       
-
-INSERT INTO team_history (player_id, start_date, team_id, end_date)
-VALUES	(307, '2025-06-29', 'XLG', NULL), -- NoMan  
-
-		(308, '2025-04-16', 'GX', NULL), -- ara  
-		(309, '2024-11-26', 'GX', NULL), -- westside  
-		(310, '2025-04-16', 'GX', NULL), -- Flickless  
-		(311, '2022-04-11', 'TH', '2022-10-10'), -- grubinho  
-		(311, '2025-05-15', 'GX', NULL), -- grubinho  
-
-		(312, '2024-10-10', 'NRG', NULL), -- mada
-		(313, '2025-05-09', 'NRG', NULL), -- skuba  
-		(314, '2025-02-16', 'NRG', NULL), -- brawk  
-
-		(315, '2025-03-18', 'EDG', NULL), -- Jieni7  
-
-		(316, '2024-10-16', 'DRG', NULL), -- SpiritZ1  
-		(317, '2025-05-07', 'DRG', NULL), -- Akeman  
-
-		(318, '2025-05-15', 'T1', NULL); -- DH
 
 INSERT INTO player_stats (player_id, match_id, headshot_pct, kd_ratio, avg_combat_score, mvps)
 VALUES	-- Masters Bangkok 2025 added
