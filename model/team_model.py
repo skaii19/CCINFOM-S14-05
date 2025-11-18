@@ -80,11 +80,25 @@ class TeamModel:
                 FROM team t
                 WHERE t.team_id = %s
             """, (team_id,))
-            return cur.fetchone()
+            result = cur.fetchone()
+            return result
         except Exception as e:
             print("Error fetching team:", e)
             return None
         
+    def get_team_ids(self):
+        try:
+            cur = get_cursor()
+            cur.execute("""
+                SELECT DISTINCT
+                    team_id
+                FROM team
+            """)
+            return cur.fetchall()
+        except Exception as e:
+            print("Error fetching team ids:", e)
+            return None
+
     # Get all teams in a specific region
     def get_teams_by_region(self, region):
         try:
