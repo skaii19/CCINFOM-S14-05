@@ -1,4 +1,5 @@
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QTableWidget, QTableWidgetItem, QHeaderView
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QTableWidget, QTableWidgetItem, \
+    QHeaderView, QLineEdit, QComboBox
 from PySide6.QtCore import Qt, Signal
 
 class PlayerTab(QWidget):
@@ -8,6 +9,11 @@ class PlayerTab(QWidget):
     delete_clicked = Signal(int)
     row_double_clicked = Signal(int)
 
+    search_changed = Signal(str)
+    team_filter_changed = Signal(str)
+    active_filter_changed = Signal(str)
+
+
     def __init__(self):
         super().__init__()
         self.setup_ui()
@@ -15,9 +21,39 @@ class PlayerTab(QWidget):
     def setup_ui(self):
         layout = QVBoxLayout()
 
+        # Search and filter
+        search_filter_row = QHBoxLayout()
+
+        # Search bar (IGN + Name)
+        self.search_box = QLineEdit()
+        self.search_box.setPlaceholderText("Search IGN or Name:")
+        self.search_box.textChanged.connect(self.search_changed.emit)
+        search_filter_row.addWidget(self.search_box)
+
+        # Team filter
+        self.team_filter = QComboBox()
+        self.team_filter.addItem("All Teams", None)
+        self.team_filter.currentIndexChanged.connect(
+            lambda: self.team_filter_changed.emit(self.team_filter.currentData())
+        )
+        search_filter_row.addWidget(self.team_filter)
+
+        # Active status filter
+        self.status_filter = QComboBox()
+        self.status_filter.addItem("All Status", None)
+        self.status_filter.addItem("Active", "Y")
+        self.status_filter.addItem("Inactive", "N")
+        self.status_filter.currentIndexChanged.connect(
+            lambda: self.active_filter_changed.emit(self.status_filter.currentData())
+        )
+        search_filter_row.addWidget(self.status_filter)
+
+        layout.addLayout(search_filter_row)
+
         # Table for displaying players
         self.table = QTableWidget()
         self.table.setColumnCount(5)
+        self.table.verticalHeader().setVisible(False)
         self.table.setHorizontalHeaderLabels(["ID", "IGN", "NAME", "ACTIVE", "CURRENT TEAM"])
 
         # Row font
@@ -167,3 +203,11 @@ class PlayerTab(QWidget):
         # Double-click signal for details window
         pid = int(self.table.item(row, 0).text())
         self.row_double_clicked.emit(pid)
+
+    def load_team_filter(self, teams):
+        # Get teams for filter dropdown
+        self.team_filter.clear()
+        self.team_filter.addItem("All Teams", None)
+
+        for t in teams:
+            self.team_filter.addItem(t["team_name"], t["team_id"])
