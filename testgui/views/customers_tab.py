@@ -24,7 +24,7 @@ class CustomersTab(QWidget):
         # Search bar (Customer Name or Ticket ID)
         self.search_box = QLineEdit()
         self.search_box.setPlaceholderText("Search Customer Name or Ticket ID:")
-        self.search_box.textChanged.connect(self.search_changed.emit)
+        self.search_box.textChanged.connect(lambda text: self.search_changed.emit(text))
         search_filter_row.addWidget(self.search_box)
 
         # Tournament filter
@@ -195,4 +195,4 @@ class CustomersTab(QWidget):
         self.tournament_filter.addItem("All", None)
 
         for t in tournaments:
-            self.tournament_filter.addItem(t["tournament_id"])
+            self.tournament_filter.addItem(t["tournament_id"], t["tournament_id"])
