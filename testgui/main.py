@@ -13,7 +13,7 @@ mw = MainWindow()
 # PlayerController(mw.player_tab)
 
 # Connect the Tournament tab to its controller
-# TournamentController(mw.tournaments_tab)
+tournament_controller = TournamentController(mw.tournaments_tab)
 
 TeamController(mw.teams_tab)
 
