@@ -1,10 +1,11 @@
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout,
-    QPushButton, QTableWidget, QTableWidgetItem, QHeaderView
+    QPushButton, QTableWidget, QTableWidgetItem, QHeaderView, QDialog
 )
 from PySide6.QtCore import Qt, Signal
 from datetime import datetime, date
 from decimal import Decimal
+from .tournament_form import TournamentForm
 
 class TournamentsTab(QWidget):
 
@@ -84,15 +85,15 @@ class TournamentsTab(QWidget):
         self.table.setAlternatingRowColors(True)
         self.table.setStyleSheet("""
             QTableWidget {
-                background-color: #121212;
-                alternate-background-color: #1E1E1E;
+                background-color: #1a8277;
+                alternate-background-color: #763746;
                 color: #FFFFFF;
-                gridline-color: #2A2A2A;
+                gridline-color: #353d49;
             }
 
             QHeaderView::section {
-                background-color: #1E1E1E;
-                color: #FF4655;  /* VCT Red */
+                background-color: #353d49;
+                color: #FFFFFF;  
                 border: none;
                 padding: 8px;
             }
@@ -104,7 +105,7 @@ class TournamentsTab(QWidget):
             }
 
             QTableWidget::item:selected {
-                background-color: #FF4655;  /* VCT Red highlight */
+                background-color: rgba(255,255,255,0.15);  
                 color: white;
             }
         """)
@@ -120,23 +121,24 @@ class TournamentsTab(QWidget):
 
         button_style = """
             QPushButton {
-                background-color: #FF4655;  /* VCT Red */
-                color: #FFFFFF;
-                border: none;
+                background-color: #353d49;  
+                color: white;
+                border: 2px solid #FF4655;
                 padding: 6px 14px;
                 border-radius: 5px;
                 font-weight: bold;
             }
             QPushButton:hover {
-                background-color: #FF6B78;
+                background-color: #763746;
             }
             QPushButton:pressed {
-                background-color: #CC3A45;
+                background-color: #161A1E;
             }
         """
 
-        for b in (self.add_btn, self.edit_btn, self.del_btn):
-            b.setStyleSheet(button_style)
+        self.add_btn.setStyleSheet(button_style)
+        self.edit_btn.setStyleSheet(button_style)
+        self.del_btn.setStyleSheet(button_style)
 
         btn_layout.addWidget(self.add_btn)
         btn_layout.addWidget(self.edit_btn)
@@ -144,7 +146,7 @@ class TournamentsTab(QWidget):
         btn_layout.addStretch()
 
         # ---- BUTTON SIGNALS ----
-        self.add_btn.clicked.connect(self.add_clicked.emit)
+        self.add_btn.clicked.connect(lambda: self.add_clicked.emit())
         self.edit_btn.clicked.connect(self.on_edit)
         self.del_btn.clicked.connect(self.on_delete)
 
@@ -219,3 +221,5 @@ class TournamentsTab(QWidget):
     def on_double_click(self, row, col):
         tid = self.table.item(row, 0).text()
         self.row_double_clicked.emit(tid)
+
+
