@@ -8,7 +8,6 @@ from models.team_history_model import TeamHistoryModel
 from views.player_form import PlayerForm
 from views.player_details_window import PlayerDetailsWindow
 
-
 class PlayerController:
 
     def __init__(self, view):
@@ -29,13 +28,52 @@ class PlayerController:
         self.view.delete_clicked.connect(self.delete_player)
         self.view.row_double_clicked.connect(lambda pid: self.show_player_details(pid))
 
+        # Search/filter signals
+        view.search_changed.connect(self.apply_filters)
+        view.team_filter_changed.connect(self.apply_filters)
+        view.active_filter_changed.connect(self.apply_filters)
+
         # Load initial table
         self.load_table()
 
-    # Load table
+        # Load teams into filter dropdown
+        teams = self.player_model.get_teams()
+        self.view.load_team_filter(teams)
+
+
+# Load table
     def load_table(self):
         players = self.player_model.load_players()
         self.view.fill(players)
+
+    # Search and Filter
+    def apply_filters(self, *args):
+        search = self.view.search_box.text().strip().lower()
+        team = self.view.team_filter.currentData()
+        status = self.view.status_filter.currentData()
+
+        players = self.player_model.load_players()
+
+        filtered = []
+        for p in players:
+
+            # Search filter
+            if search:
+                if search not in p["player_ign"].lower() and search not in p["player_name"].lower():
+                    continue
+
+            # Team filter
+            if team and p["team_id"] != team:
+                continue
+
+            # Active filter
+            if status and p["active_status"][0] != status:   # Yes/No → Y/N
+                continue
+
+            filtered.append(p)
+
+        self.view.fill(filtered)
+
 
     # Add Player
     def add_player(self):
