@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout,
-    QPushButton, QTableWidget, QTableWidgetItem, QHeaderView, QDialog
+    QPushButton, QTableWidget, QTableWidgetItem, QHeaderView, QDialog, QMessageBox
 )
 from PySide6.QtCore import Qt, Signal
 from datetime import datetime, date
@@ -149,6 +149,11 @@ class TournamentsTab(QWidget):
         self.add_btn.clicked.connect(lambda: self.add_clicked.emit())
         self.edit_btn.clicked.connect(self.on_edit)
         self.del_btn.clicked.connect(self.on_delete)
+        self.table.cellDoubleClicked.connect(self.on_double_click)
+
+
+        self.table.setSelectionBehavior(QTableWidget.SelectRows)
+        self.table.setSelectionMode(QTableWidget.SingleSelection)
 
         # Background
         self.setStyleSheet("background-color: #121212;")  
@@ -202,16 +207,20 @@ class TournamentsTab(QWidget):
     # ---- SELECTION HELPERS ----
 
     def get_selected_id(self):
-        row = self.table.currentRow()
-        if row < 0:
+        selected_items = self.table.selectedItems()
+        if not selected_items:
             return None
-        return self.table.item(row, 0).text()  
+        # ID is always in column 0
+        row = selected_items[0].row()
+        return self.table.item(row, 0).text()
 
     # Button handlers
     def on_edit(self):
         tid = self.get_selected_id()
         if tid:
             self.edit_clicked.emit(tid)
+        else:
+            QMessageBox.warning(self, "No Selection", "Please select a tournament to edit.")
 
     def on_delete(self):
         tid = self.get_selected_id()
@@ -221,5 +230,3 @@ class TournamentsTab(QWidget):
     def on_double_click(self, row, col):
         tid = self.table.item(row, 0).text()
         self.row_double_clicked.emit(tid)
-
-
