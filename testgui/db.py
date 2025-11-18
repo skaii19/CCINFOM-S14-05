@@ -11,8 +11,8 @@ def get_connection():
         _connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="DLSU123",
-            database="vct_test"
+            password="DLSU1234!",
+            database="vct"
         )
 
     # Return active MySQL connection
