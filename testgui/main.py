@@ -4,6 +4,7 @@ from views.main_window import MainWindow
 from controllers.team_controller import TeamController
 # from controllers.tournament_controller import TournamentController
 from controllers.customer_controller import CustomerController
+from controller.merchandise_controller import MerchandiseController
 
 # Create the Qt application
 app = QApplication([])
@@ -20,6 +21,8 @@ mw = MainWindow()
 TeamController(mw.teams_tab)
 
 CustomerController(mw.customers_tab)
+
+merchandise_controller = MerchandiseController(mw.merch_tab)
 
 # Show the UI
 mw.show()
