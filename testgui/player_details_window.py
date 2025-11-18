@@ -16,6 +16,7 @@ class PlayerDetailsWindow(QWidget):
         history = self.details["history"]
         agents = self.details["agents"]
         mvps = self.details["mvps"]
+        tourns = self.details["tourns"]
 
         # Basic info
         layout.addWidget(QLabel(f"IGN: {basic['player_ign']}"))
@@ -23,15 +24,19 @@ class PlayerDetailsWindow(QWidget):
 
         # Stats section
         layout.addWidget(QLabel("Stats:"))
+        stats_box = QTextEdit()
+        stats_box.setReadOnly(True)
 
         if stats:
-            layout.addWidget(QLabel(f"KD Ratio: {stats['kd_ratio'] or 'N/A'}"))
-            layout.addWidget(QLabel(f"Headshot %: {stats['headshot_pct'] or 'N/A'}"))
-            layout.addWidget(QLabel(f"ACS: {stats['avg_combat_score'] or 'N/A'}"))
+            stats_box.append(f"KD Ratio: {stats['kd_ratio'] or 'N/A'}")
+            stats_box.append(f"Headshot %: {stats['headshot_pct'] or 'N/A'}")
+            stats_box.append(f"ACS: {stats['avg_combat_score'] or 'N/A'}")
         else:
-            layout.addWidget(QLabel("KD Ratio: N/A"))
-            layout.addWidget(QLabel("Headshot %: N/A"))
-            layout.addWidget(QLabel("ACS: N/A"))
+            stats_box.append("KD Ratio: N/A")
+            stats_box.append("Headshot %: N/A")
+            stats_box.append("ACS: N/A")
+
+        layout.addWidget(stats_box)
 
         # Team history section
         layout.addWidget(QLabel("Team History:"))
@@ -48,6 +53,21 @@ class PlayerDetailsWindow(QWidget):
             hist_box.append("No team history available.")
 
         layout.addWidget(hist_box)
+
+        # Tournaments joined section
+        layout.addWidget(QLabel("Tournaments Joined:"))
+        tourn_box = QTextEdit()
+        tourn_box.setReadOnly(True)
+
+        if tourns:
+            for t in tourns:
+                tid = t["tournament_id"]
+                name = t["tournament_name"]
+                tourn_box.append(f"{tid} - {name}")
+        else:
+            tourn_box.append("No tournament participation recorded.")
+
+        layout.addWidget(tourn_box)
 
         # Agents section
         layout.addWidget(QLabel("Agents Used:"))
