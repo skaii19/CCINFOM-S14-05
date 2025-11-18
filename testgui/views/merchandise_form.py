@@ -95,3 +95,4 @@ class MerchandiseForm(QDialog):
 
         self.saved.emit(data)
         self.accept()
+
