@@ -11,6 +11,9 @@ mw = MainWindow()
 # Connect the Player tab to its controller
 PlayerController(mw.player_tab)
 
+# Connect the Tournament tab to its controller
+TournamentController(mw.tournaments_tab)
+
 # Show the UI
 mw.show()
 
