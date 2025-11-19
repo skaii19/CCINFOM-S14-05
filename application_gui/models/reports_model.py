@@ -2,79 +2,98 @@ from db import get_cursor, get_connection
 
 class ReportsModel:
 
-    # tournament revenue
-    def revenue_tournament_day (self, tournament_id, date_of_ticket) :
+    def revenue_tournament_day(self, tournament_id, date_of_ticket):
         try:
-            cur = get_cursor() 
+            cur = get_cursor()
             cur.execute("""
-                        SELECT t.tournament_id, SUM(c.ticket_price) AS total_ticket_sales, c.date_of_ticket FROM customer c
-                        JOIN tournament t ON c.tournament_id = t.tournament_id
-                        WHERE t.tournament_id = %s AND c.date_of_ticket = %s
-                        GROUP BY t.tournament_id, c.date_of_ticket
-                        ORDER BY c.date_of_ticket
-                        """, (tournament_id, date_of_ticket))
+                SELECT
+                    t.tournament_id,
+                    t.tournament_name,
+                    t.tournament_type,
+                    c.date_of_ticket,
+                    SUM(c.ticket_price) AS total_ticket_sales
+                FROM customer c
+                JOIN tournament t ON c.tournament_id = t.tournament_id
+                WHERE t.tournament_id = %s AND c.date_of_ticket = %s
+                GROUP BY t.tournament_id, t.tournament_name, t.tournament_type, c.date_of_ticket
+                ORDER BY c.date_of_ticket
+            """, (tournament_id, date_of_ticket))
             return cur.fetchall()
         except Exception as e:
             print("Error loading revenue for tournament day:", e)
             return []
-        
-    def revenue_tournament (self, tournament_id) :
+
+    def revenue_tournament(self, tournament_id):
         try:
-            cur = get_cursor() 
+            cur = get_cursor()
             cur.execute("""
-                        SELECT t.tournament_id, SUM(c.ticket_price) AS total_ticket_sales FROM customer c
-                        JOIN tournament t ON c.tournament_id = t.tournament_id
-                        WHERE t.tournament_id = %s
-                        GROUP BY t.tournament_id
-                        ORDER BY t.tournament_id
-                        """, (tournament_id))
+                SELECT
+                    t.tournament_id,
+                    t.tournament_name,
+                    t.tournament_type,
+                    SUM(c.ticket_price) AS total_ticket_sales
+                FROM customer c
+                JOIN tournament t ON c.tournament_id = t.tournament_id
+                WHERE t.tournament_id = %s
+                GROUP BY t.tournament_id, t.tournament_name, t.tournament_type
+                ORDER BY t.tournament_id
+            """, (tournament_id,))
             return cur.fetchall()
         except Exception as e:
             print("Error loading revenue for tournament:", e)
             return []
-        
-    def revenue_year (self, year) :
+
+    def revenue_year(self, year):
         try:
-            cur = get_cursor() 
+            cur = get_cursor()
             cur.execute("""
-                        SELECT 
-                            YEAR(date_of_ticket) AS tourn_year,
-                            SUM(ticket_price) AS total_ticket_sales
-                        FROM customer
-                        WHERE YEAR(date_of_ticket) = %s
-                        GROUP BY 
-                            YEAR(date_of_ticket)
-                        ORDER BY tourn_year
-                        """, (year))
+                SELECT
+                    YEAR(date_of_ticket) AS tourn_year,
+                    SUM(ticket_price) AS total_ticket_sales
+                FROM customer
+                WHERE YEAR(date_of_ticket) = %s
+                GROUP BY YEAR(date_of_ticket)
+            """, (year,))
             return cur.fetchall()
         except Exception as e:
             print("Error loading revenue for year:", e)
             return []
-    
-    # merchandise revenue
-    def revenue_product(self, product_id) :
+
+
+    def average_per_tournament(self):
         try:
-            cur = get_cursor() 
+            cur = get_cursor()
             cur.execute("""
-                        SELECT 
-                            p.product_id,
-                            p.product_name,
-                            SUM(st.quantity_sold) AS total_units_sold,
-                            p.product_price,
-                            SUM(st.quantity_sold * p.product_price) AS total_revenue
-                        FROM 
-                            sales_transaction st
-                        JOIN 
-                            product p ON st.product_id = p.product_id
-                        WHERE 
-                            p.product_id = %s
-                        GROUP BY 
-                            p.product_id, p.product_name, YEAR(st.transaction_date), p.product_price
-                        """, (product_id))
+                SELECT
+                    t.tournament_id,
+                    t.tournament_name,
+                    t.tournament_type,
+                    AVG(c.ticket_price) AS average_ticket_sales
+                FROM customer c
+                JOIN tournament t ON c.tournament_id = t.tournament_id
+                GROUP BY t.tournament_id, t.tournament_name, t.tournament_type
+                ORDER BY t.tournament_id
+            """)
             return cur.fetchall()
         except Exception as e:
-            print("Error loading product revenue:", e)
+            print("Error loading average per tournament:", e)
             return []
+
+        
+    def get_tournament_days(self, tournament_id):
+        try:
+            cur = get_cursor()
+            cur.execute("""
+                SELECT DISTINCT date_of_ticket
+                FROM customer
+                WHERE tournament_id = %s
+                ORDER BY date_of_ticket
+            """, (tournament_id,))
+            return [row[0] for row in cur.fetchall()]
+        except Exception as e:
+            print("Error fetching tournament days:", e)
+            return []
+
         
     def revenue_merchandise_year(self) :
         try:
