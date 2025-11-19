@@ -19,3 +19,4 @@ After using these tools, the content was reviewed and edited as needed.
 **References used for this project**:
 - https://liquipedia.net/valorant/Main_Page
 - https://www.w3schools.com/python/python_mysql_getstarted.asp 
+- https://www.vlr.gg/
