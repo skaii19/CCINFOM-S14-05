@@ -121,12 +121,9 @@ class ReportsTab(QWidget):
                 self.clear_layout(item.layout())
 
     def update_filters(self, report_name):
-    # Get the controller to manage signal disconnections/reconnections
         controller = None
         controller = getattr(self, "controller", None)
 
-
-        # Disconnect signals for existing filters before clearing (to avoid dangling references)
         if controller:
             if hasattr(self, 'tournament_filter') and self.tournament_filter:
                 try:
@@ -142,8 +139,6 @@ class ReportsTab(QWidget):
         # Clear old filters
         self.clear_layout(self.filter_container)
 
-        # Delete all possible filter attributes to prevent dangling references
-        # This ensures only attributes for the current report type exist
         filter_attrs = [
             'tournament_filter', 'tournament_day_filter', 'year_filter',
             'merch_tournament_filter', 'merch_month_filter', 'merch_year_filter',
