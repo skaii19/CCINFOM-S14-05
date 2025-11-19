@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QTableWidgetItem, QMessageBox
-from PySide6.QtCore import QDate, Qt  # Added Qt for table styling in _append_stat_section
-from model.reports_model import ReportsModel  
-from model.tournament_model import TournamentModel
+from PySide6.QtCore import QDate, Qt  
+from models.reports_model import ReportsModel  
+from models.tournament_model import TournamentModel
 from datetime import datetime, date
 
 class ReportController:
@@ -282,3 +282,4 @@ class ReportController:
             self.view.stat_year_filter.setCurrentText(str(QDate.currentDate().year()))
             
         self.view.table.setRowCount(0)
+
