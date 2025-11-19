@@ -140,6 +140,26 @@ CREATE TABLE IF NOT EXISTS customer (
     verified BIT DEFAULT 0
 );
 
+-- product
+CREATE TABLE IF NOT EXISTS product (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(50) NOT NULL,
+    product_price DECIMAL(6,2) NOT NULL,
+    product_description VARCHAR(100),
+    quantity_inStock INT NOT NULL
+);
+
+-- sales_transaction
+CREATE TABLE IF NOT EXISTS sales_transaction (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    customer_name VARCHAR(50) NOT NULL,
+    transaction_date DATE NOT NULL,
+    product_id INT NOT NULL,
+    quantity_sold INT NOT NULL,
+    CONSTRAINT FOREIGN KEY (product_id) REFERENCES product(product_id),
+    CONSTRAINT FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
 INSERT INTO team(team_id, team_name, region, total_winnings, active_status)
 -- active teams
 -- Americas
@@ -29803,3 +29823,31 @@ VALUES	-- Valorant Champions 2025 added
         (79, 'VC25_GF_05', '24', '0.87', '197', 'N'), -- 79  
         (56, 'VC25_GF_05', '40', '0.50', '141', 'N'), -- 56  
         (16, 'VC25_GF_05', '10', '0.40', '113', 'N'); -- 16
+
+
+	select * from product;
+INSERT INTO product (product_name, product_price, product_description, quantity_inStock) 
+	VALUES
+('VCT T-Shirt', 25.00, 'Official Valorant Champions Tour T-Shirt', 100),
+('VCT Cap', 15.00, 'VCT branded baseball cap', 50),
+('VCT Hoodie', 50.00, 'VCT Hoodie with logo', 75),
+('VCT Keychain', 5.00, 'Metal keychain with VCT logo', 200),
+('VCT Poster', 10.00, 'Poster of the VCT event', 150),
+('VCT Mug', 12.50, 'Ceramic mug with VCT design', 80),
+('VCT Lanyard', 8.00, 'Official VCT lanyard', 120),
+('VCT Water Bottle', 18.00, 'Reusable water bottle with VCT logo', 60),
+('VCT Sticker Pack', 7.50, 'Set of 5 VCT stickers', 300),
+('VCT Sweatpants', 35.00, 'Comfortable VCT sweatpants', 40);
+
+INSERT INTO sales_transaction (customer_id, customer_name, transaction_date, product_id, quantity_sold)
+	VALUES
+(1, 'Alice Reyes', '2021-05-25', 1, 2),
+(2, 'Brandon Lee', '2021-05-28', 2, 1),
+(3, 'Cara Martinez', '2021-05-30', 3, 1),
+(4, 'Daniel Cruz', '2021-09-12', 1, 3),
+(5, 'Emma Johnson', '2021-09-15', 4, 1),
+(6, 'Felix Tan', '2021-09-18', 5, 2),
+(7, 'Grace Park', '2021-12-03', 2, 1),
+(8, 'Hiro Sato', '2021-12-07', 3, 2),
+(9, 'Isabela Liu', '2021-12-10', 4, 1),
+(10, 'James Miller', '2022-04-12', 1, 1);
