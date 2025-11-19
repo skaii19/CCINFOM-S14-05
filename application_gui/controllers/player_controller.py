@@ -170,7 +170,8 @@ class PlayerController:
             "stats": self.details_model.get_aggregated_stats(player_id),
             "history": self.details_model.get_team_history(player_id),
             "agents": self.details_model.get_agent_picks(player_id),
-            "mvps": self.details_model.get_mvp_count(player_id)
+            "mvps": self.details_model.get_mvp_count(player_id),
+            "tourns": self.details_model.get_tournaments_joined(player_id)
         }
 
         window = PlayerDetailsWindow(details)
