@@ -1,4 +1,5 @@
 from db import get_cursor, get_connection
+from datetime import timedelta
 
 class TournamentModel:
 
@@ -126,4 +127,31 @@ class TournamentModel:
             return [row['tournament_id'] for row in rows]
         except Exception as e:
             print("Error fetching tournaments by type and year:", e)
+            return []
+        
+    def get_tournament_days(self, tournament_id):
+        try:
+            cur = get_cursor()
+            cur.execute("""
+                SELECT start_date, end_date
+                FROM tournament
+                WHERE tournament_id = %s
+            """, (tournament_id,))
+            row = cur.fetchone()
+            if not row:
+                return []
+
+            start_date = row['start_date']
+            end_date = row['end_date']
+
+            # Generate all days between start and end
+            days = []
+            current = start_date
+            while current <= end_date:
+                days.append(current)
+                current += timedelta(days=1)
+            return days
+
+        except Exception as e:
+            print("Error fetching tournament days:", e)
             return []
