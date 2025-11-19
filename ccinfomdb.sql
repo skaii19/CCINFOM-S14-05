@@ -14387,6 +14387,7 @@ VALUES
 		('VC21_GF_04', '2021_C1', '2021-12-13', '05:15:00', 'Grand Final', 'ACE', 'GMB', 'ACE', 5, '14-12', '74'),
 		('VC21_GF_05', '2021_C1', '2021-12-13', '06:35:00', 'Grand Final', 'ACE', 'GMB', 'ACE', 3, '13-8', '74');
 
+<<<<<<< HEAD
 INSERT INTO matches(match_id, tournament_id, match_date, match_time, bracket, team1_id, team2_id, map_winner_team_id, map_played, score, mvp_player_id)
 VALUES
 		('MR22_OB_01', '2022_M1', '2022-04-15', '01:55:00', 'Opening (B)', 'KRU', 'TL', 'TL', 7, '6-13', '11'),
@@ -14396,6 +14397,8 @@ VALUES
 
 SELECT * FROM matches;
 
+=======
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
 INSERT INTO matches (match_id, tournament_id, match_date, match_time, bracket, team1_id, team2_id, map_winner_team_id, map_played, score, mvp_player_id)
 VALUES	
 		-- ==================================================
@@ -14494,7 +14497,11 @@ VALUES
 		-- LOUD vs OPTC
 		('MR22_GF_01', '2022_M1', '2022-04-25', '01:00:00', 'Grand Final', 'LOUD', 'OPTC', 'OPTC', 4, '9-13', '58'),
 		('MR22_GF_02', '2022_M1', '2022-04-25', '02:30:00', 'Grand Final', 'LOUD', 'OPTC', 'OPTC', 1, '12-14', '60'),
+<<<<<<< HEAD
 		('MR22_GF_03', '2022_M1', '2022-04-25', '03:55:00', 'Grand Final', 'LOUD', 'OPTC', 'OPTC', 6, '13-15', '56'),
+=======
+		('MR22_GF_03', '2022_M1', '2022-04-25', '03:55:00', 'Grand Final', 'LOUD', 'OPTC', 'OPTC', 6, '13-15', '56');
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         
 		-- ===================================================
 		--    TOURNAMENT: Masters Copenhagen 2022 (2022_M2) 
@@ -18087,6 +18094,7 @@ VALUES
         ('MR22_OB_04', '48', 4),         -- Sushiboys
         ('MR22_OB_04', '49', 7),            -- Crws
         ('MR22_OB_04', '50', 3),            -- sScary
+<<<<<<< HEAD
         ('MR22_OB_04', '144', 9);           -- Surf
 
 INSERT INTO matches(match_id, tournament_id, team1_id, team2_id)
@@ -18097,6 +18105,10 @@ VALUES
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+        ('MR22_OB_04', '144', 9),           -- Surf
+
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         -- Elimination (B)
         -- XIA vs TL
         -- Match 1
@@ -18139,6 +18151,7 @@ VALUES
         ('MR22_EB_03', '13', 3),            -- L1NK
         ('MR22_EB_03', '14', 6),            -- soulcas
         ('MR22_EB_03', '15', 9),            -- Jamppi
+<<<<<<< HEAD
         ('MR22_EB_03', '123', 4);        -- Nivera
         
 INSERT INTO matches(match_id, tournament_id, team1_id, team2_id)
@@ -18148,6 +18161,11 @@ VALUES
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+        ('MR22_EB_03', '123', 4),        -- Nivera
+
+
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         -- Winners (B)
         -- OPTC vs KRU
         -- Match 1
@@ -18176,10 +18194,16 @@ VALUES
         ('MR22_WB_02', '38', 3),            -- delz1k
         ('MR22_WB_02', '39', 16),           -- Klaus
         ('MR22_WB_02', '40', 6),            -- Mazino
+<<<<<<< HEAD
         ('MR22_WB_02', '71', 17);         -- keznit
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+        ('MR22_WB_02', '71', 17),         -- keznit
+
+
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         -- Decider (B)
         -- XIA vs OPTC
         -- Match 1
@@ -18208,10 +18232,15 @@ VALUES
         ('MR22_DB_02', '57', 18),            -- Victor
         ('MR22_DB_02', '58', 1),       -- Marved
         ('MR22_DB_02', '59', 16),           -- FiNESSE
+<<<<<<< HEAD
         ('MR22_DB_02', '60', 17);         -- yay
     
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+        ('MR22_DB_02', '60', 17),         -- yay
+        
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
 		-- == PLAYOFFS ==
         -- Upper Quarterfinals --
 		-- G2 vs ZETA
@@ -18284,10 +18313,16 @@ VALUES
 		('MR22_UQF_05', '23', 16),				-- saadhak
 		('MR22_UQF_05', '156', 3),				-- pANcada
 		('MR22_UQF_05', '157', 4),			-- Less
+<<<<<<< HEAD
 		('MR22_UQF_05', '158', 9);				-- aspas
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+		('MR22_UQF_05', '158', 9),				-- aspas
+
+
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
 		-- PRX vs DRX
 		-- Match 6
 		-- DRX 
@@ -18329,10 +18364,16 @@ VALUES
 		('MR22_UQF_08', '108', 9),				-- f0rsakeN
 		('MR22_UQF_08', '109', 6),				-- Benkai
 		('MR22_UQF_08', '110', 4),			-- d4v41
+<<<<<<< HEAD
 		('MR22_UQF_08', '155', 16);			-- Jinggg
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+		('MR22_UQF_08', '155', 16),			-- Jinggg
+
+
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
 		-- TGRD vs OPTC
 		-- Match 9
 		-- OpTic Gaming (OPTC)
@@ -18374,10 +18415,15 @@ VALUES
 		('MR22_UQF_11', '151', 9),				-- Sayaplayer
 		('MR22_UQF_11', '152', 2),			-- JonahP
 		('MR22_UQF_11', '153', 17),			-- neT
+<<<<<<< HEAD
 		('MR22_UQF_11', '154', 12);			-- trent
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+		('MR22_UQF_11', '154', 12),			-- trent
+        
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         -- Lower Round 1 --
 		-- ZETA vs TL
 		-- Match 1
@@ -18450,10 +18496,15 @@ VALUES
 		('MR22_LR1_05', '108', 9),				-- f0rsakeN
 		('MR22_LR1_05', '109', 5),			-- Benkai
 		('MR22_LR1_05', '110', 7),				-- d4v41
+<<<<<<< HEAD
 		('MR22_LR1_05', '155', 11);				-- Jinggg
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+		('MR22_LR1_05', '155', 11),				-- Jinggg
+        
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         -- Upper Semifinals --
 		-- DRX vs OPTC
 		-- Match 1
@@ -18777,9 +18828,13 @@ VALUES
 		('MR22_GF_03', '58', 17),            -- Marved
 		('MR22_GF_03', '59', 2),              -- FiNESSE
 		('MR22_GF_03', '60', 9);               -- yay
+<<<<<<< HEAD
 
 INSERT INTO agent_pick (match_id, player_id, agent_id)
 VALUES
+=======
+        
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
         -- ===================================================
 		--    TOURNAMENT: Masters Copenhagen 2022 (2022_M2) 
 		-- ===================================================
@@ -21021,9 +21076,13 @@ VALUES
         ('VC22_GF_04', '58', 3),             -- Marved
         ('VC22_GF_04', '59', 4),          -- FiNESSE
         ('VC22_GF_04', '60', 17);          -- yay
+<<<<<<< HEAD
 
 SELECT match_id FROM matches WHERE match_id = 'MR22_OB_01';
 
+=======
+        
+>>>>>>> 86c2e065f637c185d46404f1f8abf40138dab45a
 INSERT INTO agent_pick (match_id, player_id, agent_name)
 VALUES	-- ==============================================
 		--    TOURNAMENT: Masters Tokyo 2023 (2023_M1) 
