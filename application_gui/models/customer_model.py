@@ -109,4 +109,3 @@ class CustomerModel:
         except Exception as e:
             print(f"Error loading customers with payment {mode_of_payment}:", e)
             return []
-
