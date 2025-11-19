@@ -9,7 +9,6 @@ This database application submission includes:
 
 During the making of this project the group used ChatGPT and Github Copilot for the following: 
 
-- debugging code,
 - formatting,
 - generating sample customer data,
 - providing a python script to generate sample customer data (attached in the submission as “generate.py”).
